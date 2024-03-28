@@ -2,8 +2,11 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AutomaticMovement
+    - CameraController
+    - PlayerController
     - RotateObject
     - Scene
+    - SwipeController
     Unity.PlasticSCM.Editor.dll:
     - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
@@ -76,17 +79,41 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 24260}
+    - Class: 114
+      Script: {instanceID: 24338}
+    - Class: 114
+      Script: {instanceID: 24468}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -140,21 +167,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 19080}
     - Class: 114
-      Script: {instanceID: 19188}
+      Script: {instanceID: 19086}
     - Class: 114
-      Script: {instanceID: 19442}
+      Script: {instanceID: 19190}
     - Class: 114
-      Script: {instanceID: 20158}
+      Script: {instanceID: 19444}
     - Class: 114
-      Script: {instanceID: 20708}
+      Script: {instanceID: 20160}
     - Class: 114
-      Script: {instanceID: 20742}
+      Script: {instanceID: 20710}
     - Class: 114
-      Script: {instanceID: 21190}
+      Script: {instanceID: 20744}
     - Class: 114
-      Script: {instanceID: 22408}
+      Script: {instanceID: 21192}
     - Class: 114
-      Script: {instanceID: 24142}
+      Script: {instanceID: 22410}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -576,6 +603,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: ab7e35f9674d81e4910d7c7162f0f384
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Scene
   - hash:
       serializedVersion: 2
       Hash: 682dfc653b22feea53b38adb3bc66414
@@ -1214,12 +1247,24 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: ab7e35f9674d81e4910d7c7162f0f384
+      Hash: e499c4312e0ce7c8aa3137c17204624a
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: Scene
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: 1a7433edd5ecb6f8e899ddad75377d27
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SwipeController
+  - hash:
+      serializedVersion: 2
+      Hash: a619bc86c74ca7cd76570072a425e28d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraController
   platform: 13
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/C1R0P/Desktop/5432.apk
+  playerPath: D:/xd/dota4.apk

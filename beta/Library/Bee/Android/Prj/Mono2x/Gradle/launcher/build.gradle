@@ -5,7 +5,7 @@ dependencies {
     }
 
 android {
-    ndkPath "C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
+    ndkPath "D:/Unity hub editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
 
     compileSdkVersion 32
     buildToolsVersion '32.0.0'
@@ -18,12 +18,12 @@ android {
     defaultConfig {
         minSdkVersion 22
         targetSdkVersion 32
-        applicationId 'com.Ishak_pank.Dota5'
+        applicationId 'com.Ishak_pank.Dota3'
         ndk {
             abiFilters 'armeabi-v7a'
         }
         versionCode 1
-        versionName '1.2'
+        versionName '1.3'
     }
 
     aaptOptions {
@@ -33,7 +33,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('C:/Users/C1R0P/beta/user.keystore')
+            storeFile file('D:/Beta/beta/user.keystore')
             storePassword '123456'
             keyAlias 'c1r0p'
             keyPassword '123456'
