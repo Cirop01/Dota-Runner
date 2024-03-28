@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+dependencies {
+    implementation project(':unityLibrary')
+    }
+
+android {
+    ndkPath "C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
+
+    compileSdkVersion 32
+    buildToolsVersion '32.0.0'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 32
+        applicationId 'com.Ishak_pank.Dota5'
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
+        versionCode 1
+        versionName '1.2'
+    }
+
+    aaptOptions {
+        noCompress = ['.unity3d', '.ress', '.resource', '.obb', '.bundle', '.unityexp'] + unityStreamingAssets.tokenize(', ')
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('C:/Users/C1R0P/beta/user.keystore')
+            storePassword '123456'
+            keyAlias 'c1r0p'
+            keyPassword '123456'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.release
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.release
+        }
+    }
+
+    packagingOptions {
+        doNotStrip '*/armeabi-v7a/*.so'
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = false
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+}
