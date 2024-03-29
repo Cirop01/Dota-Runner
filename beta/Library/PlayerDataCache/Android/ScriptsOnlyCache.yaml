@@ -4,10 +4,12 @@ ScriptsOnlyBuild:
     - AutomaticMovement
     - BackgroundMusicToggle
     - CameraController
+    - CoinMovement
     - GraphicsSettings
     - PlayerController
     - RotateObject
     - Scene
+    - Score
     - SwipeController
     - TileGenerator
     Unity.PlasticSCM.Editor.dll:
@@ -96,6 +98,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: GraphicsSettings
     methodName: SetQuality
+  - assembly: Assembly-CSharp
+    fullTypeName: Scene
+    methodName: SceneHistory
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -133,20 +138,56 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 23098}
+      Script: {instanceID: 16684}
+    - Class: 114
+      Script: {instanceID: 17692}
+    - Class: 114
+      Script: {instanceID: 17894}
+    - Class: 114
+      Script: {instanceID: 18184}
+    - Class: 114
+      Script: {instanceID: 20118}
+    - Class: 114
+      Script: {instanceID: 20664}
+    - Class: 114
+      Script: {instanceID: 20818}
+    - Class: 114
+      Script: {instanceID: 21140}
+    - Class: 114
+      Script: {instanceID: 23110}
     - Class: 114
       Script: {instanceID: 23158}
     - Class: 114
-      Script: {instanceID: 23226}
+      Script: {instanceID: 23170}
     - Class: 114
-      Script: {instanceID: 23246}
+      Script: {instanceID: 23242}
+    - Class: 114
+      Script: {instanceID: 23262}
+    - Class: 114
+      Script: {instanceID: 96914}
+    - Class: 114
+      Script: {instanceID: 124116}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/menu.unity:
     - Class: 1
@@ -218,15 +259,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22178}
     - Class: 114
-      Script: {instanceID: 23146}
+      Script: {instanceID: 23096}
     - Class: 114
-      Script: {instanceID: 23182}
+      Script: {instanceID: 23158}
     - Class: 114
-      Script: {instanceID: 23206}
+      Script: {instanceID: 23174}
     - Class: 114
-      Script: {instanceID: 25250}
+      Script: {instanceID: 23198}
     - Class: 114
-      Script: {instanceID: 25972}
+      Script: {instanceID: 23222}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1076,6 +1117,12 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
+      Hash: 97e5d5b1b273c86a59f63e341501de30
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GraphicsSettings
+  - hash:
+      serializedVersion: 2
       Hash: e2734bcc7b3e94776ade5d59f54fec1e
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1182,6 +1229,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SwipeController
+  - hash:
+      serializedVersion: 2
+      Hash: 86c47725169347aed81a4a2923841cc2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BackgroundMusicToggle
   - hash:
       serializedVersion: 2
       Hash: 4166580c620718548959a77fa7b43fc1
@@ -1310,24 +1363,30 @@ ScriptsOnlyBuild:
     className: TMP_ExampleScript_01
   - hash:
       serializedVersion: 2
-      Hash: e499c4312e0ce7c8aa3137c17204624a
+      Hash: 02206a03151347557310ced4bd4279f3
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlayerController
   - hash:
       serializedVersion: 2
-      Hash: 97e5d5b1b273c86a59f63e341501de30
+      Hash: 91c69ce076b156ce7cea4e7e66e00626
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: GraphicsSettings
+    className: Score
   - hash:
       serializedVersion: 2
-      Hash: 86c47725169347aed81a4a2923841cc2
+      Hash: b23314927a1dc59e6e505c0374e0178a
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: BackgroundMusicToggle
+    className: LeaveGame
+  - hash:
+      serializedVersion: 2
+      Hash: bf553d9e73b452818d4a519e7ac9c90f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CoinMovement
   platform: 13
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/C1R0P/Desktop/124432.apk
+  playerPath: C:/Users/home/Desktop/playit.apk
