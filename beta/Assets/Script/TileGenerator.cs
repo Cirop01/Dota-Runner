@@ -19,7 +19,9 @@ public class TileGenerator : MonoBehaviour
 
         for (int i = 0; i < startTiles; i++)
         {
-            SpawnTile(Random.Range(0, tilePrefabs.Length));
+            if (i == 0)
+                SpawnTile(0);
+            SpawnTile(Random.Range(1, tilePrefabs.Length));
         }            
 
 
@@ -28,9 +30,9 @@ public class TileGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.position.z - 80> spawnPos - (startTiles * tileLength))
+        if (player.position.z - 60> spawnPos - (startTiles * tileLength))
         {
-            SpawnTile(Random.Range(0, tilePrefabs.Length));
+            SpawnTile(Random.Range(1, tilePrefabs.Length));
             DeleteTile();
         }
 

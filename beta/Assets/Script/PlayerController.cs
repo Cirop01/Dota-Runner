@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
+        Time.timeScale = 1;
     }
 
     private void Update()
