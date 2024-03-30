@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 60
-  gravity: 0
+  gravity: 4
   lineDistance: 10
   losePanel: {fileID: 1215916403}
   coinsText: {fileID: 2084389993}
@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 205564195}
   - component: {fileID: 205564198}
   - component: {fileID: 205564199}
+  - component: {fileID: 205564200}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -654,6 +655,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &205564200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205564194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9551c94c1fc40ed4d9d24426d5dc4b87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &257647183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1330,8 @@ MonoBehaviour:
   - {fileID: 1954618015306060464, guid: 89355747027441544ad068658910fece, type: 3}
   - {fileID: 1954618015306060464, guid: be240e756b0334542b71521567c50f8a, type: 3}
   - {fileID: 1954618015306060464, guid: a9bad312e70f55642a05595471e04be1, type: 3}
+  - {fileID: 1954618015306060464, guid: db4362323d0a7c544893a3cb71123f17, type: 3}
+  - {fileID: 1954618015306060464, guid: 9543aa38b8beeb8438a1ee9eba01570e, type: 3}
   player: {fileID: 2885327}
 --- !u!4 &1197281359
 Transform:
@@ -1732,7 +1747,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1998384497}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 205564200}
+        m_TargetAssemblyTypeName: LosePanel, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1998384497
 MonoBehaviour:
   m_ObjectHideFlags: 0
