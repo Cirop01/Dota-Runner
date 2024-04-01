@@ -121,9 +121,6 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Scene
     methodName: SceneHistory
-  - assembly: Assembly-CSharp
-    fullTypeName: Scene
-    methodName: SceneHistory
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -189,9 +186,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21982}
     - Class: 114
-      Script: {instanceID: 22442}
+      Script: {instanceID: 22446}
     - Class: 114
-      Script: {instanceID: 22564}
+      Script: {instanceID: 22568}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -294,15 +291,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21212}
     - Class: 114
-      Script: {instanceID: 22254}
+      Script: {instanceID: 22256}
     - Class: 114
-      Script: {instanceID: 22282}
+      Script: {instanceID: 22284}
     - Class: 114
-      Script: {instanceID: 22426}
+      Script: {instanceID: 22350}
     - Class: 114
-      Script: {instanceID: 22536}
+      Script: {instanceID: 22430}
     - Class: 114
-      Script: {instanceID: 61338}
+      Script: {instanceID: 22540}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1278,6 +1275,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: f2d14dc7457142e433626516f8c8b34c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ToMenu
+  - hash:
+      serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1300,6 +1303,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BackgroundMusicToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 023831307d58c6d3b48a6d73f61db4cd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ToQuit
   - hash:
       serializedVersion: 2
       Hash: b9aee86f2167d83733f3d6e90be6cd06
@@ -1432,20 +1441,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 023831307d58c6d3b48a6d73f61db4cd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ToQuit
-  - hash:
-      serializedVersion: 2
-      Hash: f2d14dc7457142e433626516f8c8b34c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ToMenu
   platform: 13
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/home/Desktop/dota5.apk
+  playerPath: C:/Users/home/Desktop/dota6.apk
