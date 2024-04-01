@@ -11,7 +11,7 @@ public class TileGenerator : MonoBehaviour
     private float tileLength = 100;
 
     [SerializeField] private Transform player;
-    private int startTiles = 6;
+    private int startTiles = 4;
 
     // Start is called before the first frame update
     void Start()
