@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float gravity;
     private int lineToMove = 1;
     public float lineDistance = 4;
-    private float maxSpeed = 70;
+    private float maxSpeed = 90;
     private int coins;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text coinsText;
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
+        coins = PlayerPrefs.GetInt("coins");
     }
 
     private void Update()
@@ -78,6 +79,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "Coin")
         {
             coins++;
+            PlayerPrefs.SetInt("coins", coins);
             coinsText.text = coins.ToString();
             Destroy(other.gameObject);
         }
@@ -88,7 +90,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(4);
         if (speed < maxSpeed)
         {
-            speed += 3;
+            speed += 1;
             StartCoroutine(SpeedIncrease());            
         }
         else

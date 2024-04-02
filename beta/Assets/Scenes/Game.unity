@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfe30756c8402574881be366cc62970f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
-  gravity: 4
-  lineDistance: 10
+  speed: 45
+  gravity: 0
+  lineDistance: 5
   losePanel: {fileID: 130697936}
   coinsText: {fileID: 2084389993}
 --- !u!143 &2885323
@@ -216,7 +216,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2885321}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -228,7 +228,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d5d2628e2324f9d4099862b7391acdb4, type: 2}
+  - {fileID: 2100000, guid: a585e215cb6d0ae44822dc4b8096b8db, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -267,8 +267,8 @@ Transform:
   m_GameObject: {fileID: 2885321}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.95, z: 7.19}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalPosition: {x: 0, y: 0.87, z: 7.19}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -899,7 +899,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 73.408424
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -925,13 +925,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205564194}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11502381, y: 0, z: 0, w: 0.9933627}
-  m_LocalPosition: {x: 0, y: 19.04, z: -28.94}
+  m_LocalRotation: {x: 0.12100314, y: 0, z: 0, w: 0.9926521}
+  m_LocalPosition: {x: 0, y: 10.11, z: -11.61}
   m_LocalScale: {x: 1, y: 1, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 13.21, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.9, y: 0, z: 0}
 --- !u!114 &205564198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1865,12 +1865,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabs:
-  - {fileID: 1954618015306060464, guid: 89355747027441544ad068658910fece, type: 3}
+  - {fileID: 1954618015306060464, guid: 50dc6a781e3062348b002f8d005ba8be, type: 3}
   - {fileID: 1954618015306060464, guid: be240e756b0334542b71521567c50f8a, type: 3}
   - {fileID: 1954618015306060464, guid: a9bad312e70f55642a05595471e04be1, type: 3}
-  - {fileID: 1954618015306060464, guid: db4362323d0a7c544893a3cb71123f17, type: 3}
-  - {fileID: 1954618015306060464, guid: 9543aa38b8beeb8438a1ee9eba01570e, type: 3}
-  - {fileID: 1954618015306060464, guid: 4fe2306a8627a74488042609ec65a146, type: 3}
+  - {fileID: 1954618015306060464, guid: 4cb8aee5171d26743a5179291a2714b4, type: 3}
+  - {fileID: 1954618015306060464, guid: 970f02337083fa4469b8123666c1edc3, type: 3}
   player: {fileID: 2885327}
 --- !u!4 &1197281359
 Transform:
