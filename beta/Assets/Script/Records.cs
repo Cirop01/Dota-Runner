@@ -11,7 +11,7 @@ public class Records : MonoBehaviour
 
     private void Start()
     {
-        int coins = PlayerPrefs.GetInt("coins");
+        int coins = PlayerController.coins_all;
         coinsText.text = coins.ToString();
     }
 

@@ -8,6 +8,9 @@ public class Scene : MonoBehaviour
 
 	public void SceneHistory(int numerScenes)
 	{
+		PlayerPrefs.SetInt("coins", 0);
 		SceneManager.LoadScene(numerScenes);
 	}
+
+	
 }

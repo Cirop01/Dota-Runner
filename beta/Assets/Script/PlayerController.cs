@@ -13,8 +13,10 @@ public class PlayerController : MonoBehaviour
     public float lineDistance = 4;
     private float maxSpeed = 90;
     private int coins;
+    public static int coins_all;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text coinsText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -78,11 +80,14 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Coin")
         {
-            coins++;
-            PlayerPrefs.SetInt("coins", coins);
+            coins++; 
             coinsText.text = coins.ToString();
             Destroy(other.gameObject);
+            PlayerPrefs.SetInt("coins", coins);
+            coins_all += 1;
+
         }
+
     }
 
     private IEnumerator SpeedIncrease()

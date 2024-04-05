@@ -7,6 +7,7 @@ public class LosePanel : MonoBehaviour
 {
     public void RestartLevel()
     {
+        PlayerPrefs.SetInt("coins", 0);
         SceneManager.LoadScene(1);
     }
 }

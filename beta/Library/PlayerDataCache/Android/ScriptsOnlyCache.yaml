@@ -16,6 +16,7 @@ ScriptsOnlyBuild:
     - TileGenerator
     - ToQuit
     - btnFX
+    - pause
     Unity.PlasticSCM.Editor.dll:
     - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
@@ -122,6 +123,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Scene
     methodName: SceneHistory
+  - assembly: Assembly-CSharp
+    fullTypeName: Scene
+    methodName: SceneHistory
+  - assembly: Assembly-CSharp
+    fullTypeName: pause
+    methodName: Resume
+  - assembly: Assembly-CSharp
+    fullTypeName: pause
+    methodName: Pause
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -165,31 +175,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17904}
     - Class: 114
-      Script: {instanceID: 18196}
+      Script: {instanceID: 18198}
     - Class: 114
-      Script: {instanceID: 19086}
+      Script: {instanceID: 19088}
     - Class: 114
-      Script: {instanceID: 19748}
+      Script: {instanceID: 19750}
     - Class: 114
-      Script: {instanceID: 20166}
+      Script: {instanceID: 20168}
     - Class: 114
-      Script: {instanceID: 20288}
+      Script: {instanceID: 20290}
     - Class: 114
-      Script: {instanceID: 20568}
+      Script: {instanceID: 20570}
     - Class: 114
-      Script: {instanceID: 20720}
+      Script: {instanceID: 20722}
     - Class: 114
-      Script: {instanceID: 20878}
+      Script: {instanceID: 20880}
     - Class: 114
-      Script: {instanceID: 20932}
+      Script: {instanceID: 20934}
     - Class: 114
-      Script: {instanceID: 21204}
+      Script: {instanceID: 21206}
     - Class: 114
-      Script: {instanceID: 21982}
+      Script: {instanceID: 21986}
     - Class: 114
-      Script: {instanceID: 22446}
+      Script: {instanceID: 22450}
     - Class: 114
-      Script: {instanceID: 22568}
+      Script: {instanceID: 22572}
+    - Class: 114
+      Script: {instanceID: 114276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -264,45 +276,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17904}
     - Class: 114
-      Script: {instanceID: 18196}
+      Script: {instanceID: 17920}
     - Class: 114
-      Script: {instanceID: 18960}
+      Script: {instanceID: 18198}
     - Class: 114
-      Script: {instanceID: 19080}
+      Script: {instanceID: 18962}
     - Class: 114
-      Script: {instanceID: 19086}
+      Script: {instanceID: 19082}
     - Class: 114
-      Script: {instanceID: 19190}
+      Script: {instanceID: 19088}
     - Class: 114
-      Script: {instanceID: 19444}
+      Script: {instanceID: 19192}
     - Class: 114
-      Script: {instanceID: 20044}
+      Script: {instanceID: 19446}
     - Class: 114
-      Script: {instanceID: 20106}
+      Script: {instanceID: 20046}
     - Class: 114
-      Script: {instanceID: 20166}
+      Script: {instanceID: 20108}
     - Class: 114
-      Script: {instanceID: 20720}
+      Script: {instanceID: 20168}
     - Class: 114
-      Script: {instanceID: 20754}
+      Script: {instanceID: 20722}
     - Class: 114
-      Script: {instanceID: 20878}
+      Script: {instanceID: 20756}
     - Class: 114
-      Script: {instanceID: 21204}
+      Script: {instanceID: 20880}
     - Class: 114
-      Script: {instanceID: 21212}
+      Script: {instanceID: 21206}
     - Class: 114
-      Script: {instanceID: 22256}
+      Script: {instanceID: 21214}
     - Class: 114
-      Script: {instanceID: 22284}
+      Script: {instanceID: 22260}
     - Class: 114
-      Script: {instanceID: 22350}
+      Script: {instanceID: 22288}
     - Class: 114
-      Script: {instanceID: 22430}
+      Script: {instanceID: 22354}
     - Class: 114
-      Script: {instanceID: 22540}
+      Script: {instanceID: 22434}
     - Class: 114
-      Script: {instanceID: 113644}
+      Script: {instanceID: 22544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -508,6 +520,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: cc5d073effaa448c04cadc6dcc11c4a8
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Records
   - hash:
       serializedVersion: 2
       Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
@@ -1446,12 +1464,12 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: cc5d073effaa448c04cadc6dcc11c4a8
+      Hash: ae519decdd236e5ba154fc5be9926049
     assemblyName: Assembly-CSharp
     namespaceName: 
-    className: Records
+    className: pause
   platform: 13
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/home/Desktop/dota6.apk
+  playerPath: C:/Users/home/Desktop/damn1.apk
