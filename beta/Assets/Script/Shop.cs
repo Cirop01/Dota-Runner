@@ -18,7 +18,7 @@ public class Shop : MonoBehaviour
         access = PlayerPrefs.GetInt(objectName + "Access");
         if(access == 1)
         {
-            block.SetActive(false);
+            block.SetActive(true);
         }
     }
     public void OnButtonDown()
