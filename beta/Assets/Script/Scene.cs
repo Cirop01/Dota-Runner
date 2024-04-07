@@ -10,6 +10,7 @@ public class Scene : MonoBehaviour
 	{
 		PlayerPrefs.SetInt("coins", 0);
 		SceneManager.LoadScene(numerScenes);
+		Time.timeScale = 1;
 	}
 
 	

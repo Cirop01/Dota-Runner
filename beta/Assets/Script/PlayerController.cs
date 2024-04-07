@@ -13,7 +13,8 @@ public class PlayerController : MonoBehaviour
     public float lineDistance = 4;
     private float maxSpeed = 90;
     private int coins;
-    public static int coins_all;
+    //public static int coins_all;
+    public static int coins_all = PlayerPrefs.GetInt("coins_all");
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text coinsText;
     [SerializeField] private TMP_Text coinsResult;
@@ -26,10 +27,17 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
         coins = PlayerPrefs.GetInt("coins");
+        
+    }
+
+    void UpdateRunes()
+    {
+
     }
 
     private void Update()
     {
+        
         if (SwipeController.swipeRight)
         {
             if (lineToMove < 2)
@@ -87,6 +95,8 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             PlayerPrefs.SetInt("coins", coins);
             coins_all += 1;
+            PlayerPrefs.SetInt("coins_all", coins_all);
+            //coins_all += 1;
 
         }
 

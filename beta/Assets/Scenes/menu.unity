@@ -2310,6 +2310,32 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!1 &704842038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+  m_PrefabInstance: {fileID: 944596094}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &704842039
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704842038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 789cab2784a73de4384fcd112b1ed7b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &705361894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3154,6 +3180,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901734465}
   m_CullTransparentMesh: 1
+--- !u!1001 &944596094
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 32.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 171.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6178629
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.13692002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.77087957
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.072409905
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 16.31
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -103.62
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -7.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      propertyPath: m_Name
+      value: pine_cone
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 704842039}
+  m_SourcePrefab: {fileID: 100100000, guid: c39fc89e0425317409ac1ac90668b4f1, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4020,18 +4106,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1388204978}
-        m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
-        m_MethodName: ClickSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1411668921}
         m_TargetAssemblyTypeName: Scene, Assembly-CSharp
         m_MethodName: SceneHistory
@@ -4044,6 +4118,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 1388204978}
+        m_TargetAssemblyTypeName: btnFX, Assembly-CSharp
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1388204976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7589,3 +7675,4 @@ SceneRoots:
   - {fileID: 1296695071}
   - {fileID: 1660840654}
   - {fileID: 2068554222}
+  - {fileID: 944596094}
