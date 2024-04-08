@@ -10,6 +10,7 @@ public class Buy : MonoBehaviour
     public GameObject[] scin;
     public ScinBlueprint[] scins;
     public Button buyButton;
+    public Button nobuyButton;
     private PlayerController coins_all;
 
 
@@ -86,20 +87,26 @@ public class Buy : MonoBehaviour
         if(c.isUnlocked)
         {
             buyButton.gameObject.SetActive(false);
+            nobuyButton.gameObject.SetActive(false);
             
         }
         else
         {
             buyButton.gameObject.SetActive(true);
+            nobuyButton.gameObject.SetActive(false);
             buyButton.GetComponentInChildren<TextMeshProUGUI>().text = "" + c.price;
             if (PlayerPrefs.GetInt("coins_all", 0) > c.price)
             {
-                buyButton.interactable = true;
+                //buyButton.interactable = true;
+                buyButton.gameObject.SetActive(true);
+                nobuyButton.gameObject.SetActive(false);
                 
             }
             else
             {
-                buyButton.interactable = false;
+                //buyButton.interactable = false;
+                buyButton.gameObject.SetActive(false);
+                nobuyButton.gameObject.SetActive(true);
             }
 
             

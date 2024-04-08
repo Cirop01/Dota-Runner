@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TMP_Text coinsText;
     [SerializeField] private TMP_Text coinsResult;
     
-
     // Start is called before the first frame update
     void Start()
     {
