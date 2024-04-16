@@ -8,17 +8,18 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Vector3 dir;
     [SerializeField] private int speed;
-    public float gravity;
     private int lineToMove = 1;
     public float lineDistance = 4;
     private float maxSpeed = 90;
     private int coins;
-    //public static int coins_all;
-    public static int coins_all = PlayerPrefs.GetInt("coins_all");
+    private Animator _animator;
+    public static int coins_all;
+    //public static int coins_all = PlayerPrefs.GetInt("coins_all");
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text coinsText;
     [SerializeField] private TMP_Text coinsResult;
-    
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float gravity;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
         coins = PlayerPrefs.GetInt("coins");
+        _animator.SetBool("jump", false);
         
     }
 
@@ -37,8 +39,11 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         
+        
+        
         if (SwipeController.swipeRight)
         {
+
             if (lineToMove < 2)
                 lineToMove++;
         }
@@ -47,6 +52,14 @@ public class PlayerController : MonoBehaviour
         {
             if (lineToMove > 0)
                 lineToMove--;
+        }
+        if (SwipeController.swipeUp)
+        {
+
+            if (controller.isGrounded)
+                Jump();
+                
+                
         }
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -66,12 +79,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void Jump()
+    {
+        dir.y = jumpForce;
+        _animator.SetBool("jump", false);
+    }
+
 
 
     // Update is called once per frame
     void FixedUpdate()
     {
         dir.z = speed;
+        dir.y += gravity * Time.fixedDeltaTime;
         controller.Move(dir * Time.fixedDeltaTime);
     }
 
