@@ -7,27 +7,33 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 dir;
+    private Animator animate;
     [SerializeField] private int speed;
     private int lineToMove = 1;
     public float lineDistance = 4;
     private float maxSpeed = 90;
     private int coins;
-    private Animator _animator;
-    public static int coins_all;
-    //public static int coins_all = PlayerPrefs.GetInt("coins_all");
+    //public static int coins_all;
+    //public static int score_last;
+    public static int coins_all = PlayerPrefs.GetInt("coins_all");
+    
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text coinsText;
     [SerializeField] private TMP_Text coinsResult;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
+    [SerializeField] private Score scoreScript;
     // Start is called before the first frame update
     void Start()
     {
+        animate = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
         coins = PlayerPrefs.GetInt("coins");
-        _animator.SetBool("jump", false);
+        coinsResult.text = PlayerPrefs.GetInt("coins_all").ToString();
+
+
         
     }
 
@@ -35,6 +41,10 @@ public class PlayerController : MonoBehaviour
     {
 
     }
+
+    
+    
+
 
     private void Update()
     {
@@ -55,11 +65,11 @@ public class PlayerController : MonoBehaviour
         }
         if (SwipeController.swipeUp)
         {
-
             if (controller.isGrounded)
+            {
+                animate.SetBool("Running", false);
                 Jump();
-                
-                
+            }                          
         }
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -82,7 +92,9 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         dir.y = jumpForce;
-        _animator.SetBool("jump", false);
+        animate.SetBool("Jumping", true);
+        Waiting_();
+        //animate.SetBool("Jumping", false);
     }
 
 
@@ -93,6 +105,15 @@ public class PlayerController : MonoBehaviour
         dir.z = speed;
         dir.y += gravity * Time.fixedDeltaTime;
         controller.Move(dir * Time.fixedDeltaTime);
+
+        // Проверяем, является ли персонаж приземленным
+        if (controller.isGrounded && animate.GetBool("Jumping"))
+            {
+                // Отключаем анимацию прыжка
+                animate.SetBool("Jumping", false);
+                // Включаем анимацию бега
+                animate.SetBool("Running", true);
+            }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -121,9 +142,14 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private IEnumerator Waiting_()
+    {
+        yield return new WaitForSeconds(5);
+    }
+
     private IEnumerator SpeedIncrease()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(10);
         if (speed < maxSpeed)
         {
             speed += 1;
