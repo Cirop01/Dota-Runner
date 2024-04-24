@@ -5,7 +5,7 @@ dependencies {
     }
 
 android {
-    ndkPath "C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
+    ndkPath "D:/Unity hub editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
 
     compileSdkVersion 32
     buildToolsVersion '32.0.0'
@@ -23,7 +23,7 @@ android {
             abiFilters 'armeabi-v7a'
         }
         versionCode 1
-        versionName '2.02'
+        versionName '2.03'
     }
 
     aaptOptions {
@@ -33,7 +33,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('E:/Beta/beta/user.keystore')
+            storeFile file('D:/Beta/beta/user.keystore')
             storePassword '123456'
             keyAlias 'c1r0p'
             keyPassword '123456'

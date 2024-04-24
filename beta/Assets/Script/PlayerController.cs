@@ -93,7 +93,6 @@ public class PlayerController : MonoBehaviour
     {
         dir.y = jumpForce;
         animate.SetBool("Jumping", true);
-        Waiting_();
         //animate.SetBool("Jumping", false);
     }
 
@@ -120,6 +119,7 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.gameObject.tag == "obstacle")
         {
+
             losePanel.SetActive(true);
             Time.timeScale = 0;
         }
@@ -142,10 +142,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private IEnumerator Waiting_()
-    {
-        yield return new WaitForSeconds(5);
-    }
 
     private IEnumerator SpeedIncrease()
     {
