@@ -54,7 +54,7 @@ public class SwipeController : MonoBehaviour
         }
 
         //Проверка на пройденность расстояния
-        if (swipeDelta.magnitude > 100)
+        if (swipeDelta.magnitude > 6)
         {
             //Определение направления
             float x = swipeDelta.x;

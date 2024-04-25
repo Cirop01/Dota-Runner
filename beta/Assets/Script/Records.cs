@@ -14,7 +14,6 @@ public class Records : MonoBehaviour
     {
         int coins = PlayerController.coins_all;
         coinsText.text = coins.ToString();
-
         scoreText.text = PlayerPrefs.GetInt("best_score").ToString();
 
     }
