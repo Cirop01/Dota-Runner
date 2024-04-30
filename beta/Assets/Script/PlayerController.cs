@@ -7,15 +7,15 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 dir;
-    private Animator animate;
+    //private Animator animate;
     [SerializeField] private int speed;
     private int lineToMove = 1;
     public float lineDistance = 4;
     private float maxSpeed = 90;
     private int coins;
-    //public static int coins_all;
+    public static int coins_all;
     //public static int score_last;
-    public static int coins_all = PlayerPrefs.GetInt("coins_all");
+    //public static int coins_all = PlayerPrefs.GetInt("coins_all");
     
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text coinsText;
@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animate = GetComponent<Animator>();
+    //    animate = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
@@ -67,7 +67,8 @@ public class PlayerController : MonoBehaviour
         {
             if (controller.isGrounded)
             {
-                animate.SetBool("Running", false);
+                //animate.SetBool("Running", false);
+                AnimatorController.Running_false();
                 Jump();
             }                          
         }
@@ -92,8 +93,8 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         dir.y = jumpForce;
-        animate.SetBool("Jumping", true);
-        //animate.SetBool("Jumping", false);
+        //animate.SetBool("Jumping", true);
+        AnimatorController.Jumping_true();
     }
 
 
@@ -106,12 +107,14 @@ public class PlayerController : MonoBehaviour
         controller.Move(dir * Time.fixedDeltaTime);
 
         // Проверяем, является ли персонаж приземленным
-        if (controller.isGrounded && animate.GetBool("Jumping"))
+        if (controller.isGrounded && AnimatorController._animator.GetBool("Jumping"))
             {
                 // Отключаем анимацию прыжка
-                animate.SetBool("Jumping", false);
+                //animate.SetBool("Jumping", false);
+                AnimatorController.Jumping_false();
                 // Включаем анимацию бега
-                animate.SetBool("Running", true);
+                //animate.SetBool("Running", true);
+                AnimatorController.Running_true();
             }
     }
 
