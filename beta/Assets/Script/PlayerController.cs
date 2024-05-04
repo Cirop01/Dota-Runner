@@ -13,9 +13,10 @@ public class PlayerController : MonoBehaviour
     public float lineDistance = 4;
     private float maxSpeed = 90;
     private int coins;
-    public static int coins_all;
+    //public static int coins_all;
+    public static int coins_all = PlayerPrefs.GetInt("coins_all");
     //public static int score_last;
-    //public static int coins_all = PlayerPrefs.GetInt("coins_all");
+    
     
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text coinsText;
@@ -26,15 +27,14 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
     //    animate = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
         coins = PlayerPrefs.GetInt("coins");
         coinsResult.text = PlayerPrefs.GetInt("coins_all").ToString();
-
-
-        
+        coins_all = PlayerPrefs.GetInt("coins_all");    
     }
 
     void UpdateRunes()
@@ -42,12 +42,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
-    
-
 
     private void Update()
     {
+
         
         
         
@@ -101,6 +99,7 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
+
     {
         dir.z = speed;
         dir.y += gravity * Time.fixedDeltaTime;
@@ -144,11 +143,12 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    
 
 
     private IEnumerator SpeedIncrease()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(9);
         if (speed < maxSpeed)
         {
             speed += 1;

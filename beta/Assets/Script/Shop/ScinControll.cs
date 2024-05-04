@@ -12,9 +12,18 @@ public class ScinControll : MonoBehaviour
     {
         scinIndex = PlayerPrefs.GetInt("SelectedScin", 0);
         foreach(GameObject sck in scins)
-            sck.SetActive(false);
+            if (sck != scins[scinIndex])
+            {
+                Destroy(sck);
+            }
+            else
+                scins[scinIndex].SetActive(true);
+
+            
+
+            //sck.SetActive(false);
 
 
-        scins[scinIndex].SetActive(true);
+        
     }
 }

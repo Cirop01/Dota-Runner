@@ -33,12 +33,4 @@ public class AnimatorController : MonoBehaviour
         _animator.SetBool("Running", false);
     }
 
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
