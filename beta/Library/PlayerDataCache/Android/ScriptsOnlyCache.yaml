@@ -7,11 +7,13 @@ ScriptsOnlyBuild:
     - CameraController
     - GraphicsSettings
     - LosePanel
+    - MusicOff
     - PlayerController
     - Records
     - Scene
     - ScinControll
     - Score
+    - SoundBuy
     - SwipeController
     - TileGenerator
     - btnFX
@@ -34,8 +36,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -112,6 +116,12 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
+    fullTypeName: MusicOff
+    methodName: EnableMusic
+  - assembly: Assembly-CSharp
+    fullTypeName: MusicOff
+    methodName: EnableMusic
+  - assembly: Assembly-CSharp
     fullTypeName: GraphicsSettings
     methodName: SetQuality
   - assembly: Assembly-CSharp
@@ -139,14 +149,17 @@ ScriptsOnlyBuild:
     fullTypeName: Scene
     methodName: SceneHistory
   - assembly: Assembly-CSharp
-    fullTypeName: btnFX
-    methodName: ClickSound
+    fullTypeName: SoundBuy
+    methodName: CantBuy
   - assembly: Assembly-CSharp
     fullTypeName: Buy
     methodName: ChangePrewious
   - assembly: Assembly-CSharp
     fullTypeName: Buy
     methodName: UnLockScin
+  - assembly: UnityEngine.AudioModule
+    fullTypeName: UnityEngine.AudioSource
+    methodName: Play
   - assembly: Assembly-CSharp
     fullTypeName: btnFX
     methodName: ClickSound
@@ -196,39 +209,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16686}
     - Class: 114
-      Script: {instanceID: 17700}
+      Script: {instanceID: 17702}
     - Class: 114
-      Script: {instanceID: 17904}
+      Script: {instanceID: 17906}
     - Class: 114
-      Script: {instanceID: 18200}
+      Script: {instanceID: 18202}
     - Class: 114
-      Script: {instanceID: 19092}
+      Script: {instanceID: 19094}
     - Class: 114
-      Script: {instanceID: 19754}
+      Script: {instanceID: 19756}
     - Class: 114
-      Script: {instanceID: 20174}
+      Script: {instanceID: 20176}
     - Class: 114
-      Script: {instanceID: 20182}
+      Script: {instanceID: 20184}
     - Class: 114
-      Script: {instanceID: 20300}
+      Script: {instanceID: 20302}
     - Class: 114
-      Script: {instanceID: 20580}
+      Script: {instanceID: 20582}
     - Class: 114
-      Script: {instanceID: 20732}
+      Script: {instanceID: 20734}
     - Class: 114
-      Script: {instanceID: 20890}
+      Script: {instanceID: 20892}
     - Class: 114
-      Script: {instanceID: 20944}
+      Script: {instanceID: 20946}
     - Class: 114
-      Script: {instanceID: 21216}
+      Script: {instanceID: 21218}
     - Class: 114
-      Script: {instanceID: 22002}
+      Script: {instanceID: 22004}
     - Class: 114
-      Script: {instanceID: 22466}
+      Script: {instanceID: 22468}
     - Class: 114
-      Script: {instanceID: 22470}
+      Script: {instanceID: 22472}
     - Class: 114
-      Script: {instanceID: 22874}
+      Script: {instanceID: 22876}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -242,6 +255,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -293,29 +308,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16686}
     - Class: 114
-      Script: {instanceID: 17700}
+      Script: {instanceID: 17702}
     - Class: 114
-      Script: {instanceID: 17904}
+      Script: {instanceID: 17906}
     - Class: 114
-      Script: {instanceID: 17920}
+      Script: {instanceID: 17922}
     - Class: 114
-      Script: {instanceID: 18186}
+      Script: {instanceID: 18188}
     - Class: 114
-      Script: {instanceID: 18200}
+      Script: {instanceID: 18202}
     - Class: 114
-      Script: {instanceID: 19092}
+      Script: {instanceID: 19094}
     - Class: 114
-      Script: {instanceID: 20174}
+      Script: {instanceID: 20176}
     - Class: 114
-      Script: {instanceID: 20732}
+      Script: {instanceID: 20734}
     - Class: 114
-      Script: {instanceID: 20890}
+      Script: {instanceID: 20892}
     - Class: 114
-      Script: {instanceID: 21216}
+      Script: {instanceID: 21218}
     - Class: 114
-      Script: {instanceID: 21936}
+      Script: {instanceID: 21938}
     - Class: 114
-      Script: {instanceID: 22562}
+      Script: {instanceID: 22564}
+    - Class: 114
+      Script: {instanceID: 273908}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -376,47 +393,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16686}
     - Class: 114
-      Script: {instanceID: 17270}
+      Script: {instanceID: 16968}
     - Class: 114
-      Script: {instanceID: 17700}
+      Script: {instanceID: 17272}
     - Class: 114
-      Script: {instanceID: 17706}
+      Script: {instanceID: 17702}
     - Class: 114
-      Script: {instanceID: 17904}
+      Script: {instanceID: 17708}
     - Class: 114
-      Script: {instanceID: 17920}
+      Script: {instanceID: 17906}
     - Class: 114
-      Script: {instanceID: 18200}
+      Script: {instanceID: 17922}
     - Class: 114
-      Script: {instanceID: 18966}
+      Script: {instanceID: 18202}
     - Class: 114
-      Script: {instanceID: 19086}
+      Script: {instanceID: 18968}
     - Class: 114
-      Script: {instanceID: 19092}
+      Script: {instanceID: 19088}
     - Class: 114
-      Script: {instanceID: 19196}
+      Script: {instanceID: 19094}
     - Class: 114
-      Script: {instanceID: 19450}
+      Script: {instanceID: 19198}
     - Class: 114
-      Script: {instanceID: 20052}
+      Script: {instanceID: 19452}
     - Class: 114
-      Script: {instanceID: 20114}
+      Script: {instanceID: 20054}
     - Class: 114
-      Script: {instanceID: 20174}
+      Script: {instanceID: 20116}
     - Class: 114
-      Script: {instanceID: 20228}
+      Script: {instanceID: 20176}
     - Class: 114
-      Script: {instanceID: 20732}
+      Script: {instanceID: 20230}
     - Class: 114
-      Script: {instanceID: 20890}
+      Script: {instanceID: 20734}
     - Class: 114
-      Script: {instanceID: 21216}
+      Script: {instanceID: 20892}
     - Class: 114
-      Script: {instanceID: 21224}
+      Script: {instanceID: 21218}
     - Class: 114
-      Script: {instanceID: 22276}
+      Script: {instanceID: 21226}
     - Class: 114
-      Script: {instanceID: 22562}
+      Script: {instanceID: 22278}
+    - Class: 114
+      Script: {instanceID: 22564}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -426,8 +445,6 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
-      Script: {instanceID: 0}
-    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -510,6 +527,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: 56961dee3ee6f126fab2c551c2066d4e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MusicOff
   - hash:
       serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
@@ -1620,9 +1643,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c7f02eeb760c329763dc2cc88c12a119
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SoundBuy
   platform: 13
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Shop.unity
-  playerPath: C:/Users/C1R0P/Desktop/dota_Runner.apk
+  playerPath: C:/Users/home/Desktop/pashalka1.apk

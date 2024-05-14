@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
     public float lineDistance = 4;
     private float maxSpeed = 90;
     private int coins;
-    public static int coins_all;
-    //public static int coins_all = PlayerPrefs.GetInt("coins_all");
+    //public static int coins_all;
+    public static int coins_all = PlayerPrefs.GetInt("coins_all");
     //public static int score_last;
     
     

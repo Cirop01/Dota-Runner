@@ -18,4 +18,10 @@ public class Records : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        int coins = PlayerController.coins_all;
+        coinsText.text = coins.ToString();
+    }
+
 }

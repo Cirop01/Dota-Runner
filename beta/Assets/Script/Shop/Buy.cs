@@ -94,7 +94,7 @@ public class Buy : MonoBehaviour
         {
             buyButton.gameObject.SetActive(true);
             nobuyButton.gameObject.SetActive(false);
-            buyButton.GetComponentInChildren<TextMeshProUGUI>().text = "Buy";
+            buyButton.GetComponentInChildren<TextMeshProUGUI>().text = c.price.ToString();
             if (PlayerPrefs.GetInt("coins_all", 0) > c.price)
             {
                 //buyButton.interactable = true;
@@ -106,6 +106,7 @@ public class Buy : MonoBehaviour
             {
                 //buyButton.interactable = false;
                 buyButton.gameObject.SetActive(false);
+                nobuyButton.GetComponentInChildren<TextMeshProUGUI>().text = c.price.ToString();
                 nobuyButton.gameObject.SetActive(true);
             }
 
