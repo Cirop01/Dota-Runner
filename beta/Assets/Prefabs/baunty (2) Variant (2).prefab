@@ -256,8 +256,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6993079426815081041}
-  - component: {fileID: 2134126391082135752}
   - component: {fileID: 6777455034994147125}
+  - component: {fileID: 4389523576304441399}
   m_Layer: 0
   m_Name: baunty (2) Variant (2)
   m_TagString: Coin
@@ -282,29 +282,6 @@ Transform:
   - {fileID: 620481465190586704}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2134126391082135752
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7658292124111593707}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.8136945
-  m_Height: 1.839016
-  m_Direction: 1
-  m_Center: {x: 0.026864529, y: 1.9094458, z: 0}
 --- !u!95 &6777455034994147125
 Animator:
   serializedVersion: 5
@@ -326,6 +303,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!135 &4389523576304441399
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7658292124111593707}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.98121923
+  m_Center: {x: 0, y: 1.8824403, z: 0}
 --- !u!1 &7806098150295124708
 GameObject:
   m_ObjectHideFlags: 0

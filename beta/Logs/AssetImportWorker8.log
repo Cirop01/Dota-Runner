@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.3/staging' branch; Version is '2022.3.22f1 (887be4894c44) revision 8944612'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19045) 64bit Core' Language: 'ru' Physical Memory: 16298 MB
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 16308 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-D:\Unity hub editor\2022.3.22f1\Editor\Unity.exe
+Z:\Unity\Hub\Editor\2022.3.22f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker8
 -projectPath
-D:/Beta/beta
+Z:/Projects/Dota-Runner/beta
 -logFile
 Logs/AssetImportWorker8.log
 -srvPort
-57349
-Successfully changed project path to: D:/Beta/beta
-D:/Beta/beta
+49766
+Successfully changed project path to: Z:/Projects/Dota-Runner/beta
+Z:/Projects/Dota-Runner/beta
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,70 +49,68 @@ D:/Beta/beta
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20000] Host "[IP] 192.168.1.42 [Port] 0 [Flags] 2 [Guid] 4243927146 [EditorId] 4243927146 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GVGUE6U) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [3612] Host "[IP] 192.168.0.110 [Port] 0 [Flags] 2 [Guid] 238606137 [EditorId] 238606137 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20000] Host "[IP] 192.168.1.42 [Port] 0 [Flags] 2 [Guid] 4243927146 [EditorId] 4243927146 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-GVGUE6U) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [3612] Host "[IP] 192.168.0.110 [Port] 0 [Flags] 2 [Guid] 238606137 [EditorId] 238606137 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Refreshing native plugins compatible for Editor in 5.27 ms, found 3 plugins.
+[Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
+Refreshing native plugins compatible for Editor in 9.30 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.22f1 (887be4894c44)
-[Subsystems] Discovering subsystems at path D:/Unity hub editor/2022.3.22f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Beta/beta/Assets
+[Subsystems] Discovering subsystems at path Z:/Unity/Hub/Editor/2022.3.22f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path Z:/Projects/Dota-Runner/beta/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1050 Ti (ID=0x1c82)
-    Vendor:   NVIDIA
-    VRAM:     4017 MB
-    Driver:   31.0.15.3623
+    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Vendor:   ATI
+    VRAM:     8170 MB
+    Driver:   31.0.12027.9001
 Initialize mono
-Mono path[0] = 'D:/Unity hub editor/2022.3.22f1/Editor/Data/Managed'
-Mono path[1] = 'D:/Unity hub editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'D:/Unity hub editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56680
+Mono path[0] = 'Z:/Unity/Hub/Editor/2022.3.22f1/Editor/Data/Managed'
+Mono path[1] = 'Z:/Unity/Hub/Editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'Z:/Unity/Hub/Editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: D:/Unity hub editor/2022.3.22f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: D:/Unity hub editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: D:/Unity hub editor/2022.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005464 seconds.
-- Loaded All Assemblies, in  0.344 seconds
+Register platform support module: Z:/Unity/Hub/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: Z:/Unity/Hub/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009801 seconds.
+- Loaded All Assemblies, in  0.631 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 257 ms
-Native extension for WebGL target not found
+Android Extension - Scanning For ADB Devices 272 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.605 seconds
-Domain Reload Profiling: 949ms
-	BeginReloadAssembly (93ms)
+- Finished resetting the current domain, in  0.903 seconds
+Domain Reload Profiling: 1534ms
+	BeginReloadAssembly (179ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (154ms)
-		LoadAssemblies (93ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (105ms)
+	LoadAllAssembliesAndSetupDomain (262ms)
+		LoadAssemblies (179ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (152ms)
-			TypeCache.Refresh (151ms)
-				TypeCache.ScanAssembly (137ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (605ms)
+		AnalyzeDomain (258ms)
+			TypeCache.Refresh (256ms)
+				TypeCache.ScanAssembly (233ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (904ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (541ms)
+		SetupLoadedEditorAssemblies (793ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (360ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (466ms)
+			SetLoadedEditorAssemblies (7ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (124ms)
-			ProcessInitializeOnLoadMethodAttributes (50ms)
+			BeforeProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadAttributes (230ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -120,57 +118,56 @@ Domain Reload Profiling: 949ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.565 seconds
-Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.021 seconds
+Refreshing native plugins compatible for Editor in 3.76 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.572 seconds
-Domain Reload Profiling: 1136ms
-	BeginReloadAssembly (137ms)
+- Finished resetting the current domain, in  1.048 seconds
+Domain Reload Profiling: 2069ms
+	BeginReloadAssembly (249ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (7ms)
+		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (22ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (347ms)
-		LoadAssemblies (244ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (60ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (70ms)
+	LoadAllAssembliesAndSetupDomain (620ms)
+		LoadAssemblies (434ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (180ms)
-			TypeCache.Refresh (158ms)
-				TypeCache.ScanAssembly (142ms)
-			ScanForSourceGeneratedMonoScriptInfo (14ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (572ms)
+		AnalyzeDomain (332ms)
+			TypeCache.Refresh (293ms)
+				TypeCache.ScanAssembly (266ms)
+			ScanForSourceGeneratedMonoScriptInfo (25ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1049ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (410ms)
+		SetupLoadedEditorAssemblies (763ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (41ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (56ms)
-			ProcessInitializeOnLoadAttributes (308ms)
-			ProcessInitializeOnLoadMethodAttributes (19ms)
-			AfterProcessingInitializeOnLoad (2ms)
+			BeforeProcessingInitializeOnLoad (94ms)
+			ProcessInitializeOnLoadAttributes (571ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
+			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 3.41 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3206 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (57.6 KB). Loaded Objects now: 3689.
-Memory consumption went from 138.8 MB to 138.7 MB.
-Total: 3.053300 ms (FindLiveObjects: 0.254600 ms CreateObjectMapping: 0.209800 ms MarkObjects: 2.473100 ms  DeleteObjects: 0.114500 ms)
+Unloading 3207 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (57.4 KB). Loaded Objects now: 3713.
+Memory consumption went from 145.0 MB to 145.0 MB.
+Total: 4.831500 ms (FindLiveObjects: 0.370900 ms CreateObjectMapping: 0.192100 ms MarkObjects: 4.107600 ms  DeleteObjects: 0.159500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -187,78 +184,57 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2434458.828100 seconds.
-  path: Assets/texture/pudge/Materials
-  artifactKey: Guid(42efec87d8f93044abbd6931cfc00160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials using Guid(42efec87d8f93044abbd6931cfc00160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bf07ab9db4e8a4081ce64bbf7a2eb0e') in 0.014878 seconds
+  Time since last request: 16741.308740 seconds.
+  path: Assets/Tiles/РљСѓР±.010 (1) Variant.prefab
+  artifactKey: Guid(c57770952e92a2840889e90100421ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/РљСѓР±.010 (1) Variant.prefab using Guid(c57770952e92a2840889e90100421ed7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5a6c8f42de5ee3fc8caaa31f0166279') in 0.201342 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 16
 ========================================================================
 Received Import Request.
-  Time since last request: 0.072173 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_apron_color_psd_ec2cd72e.mat
-  artifactKey: Guid(144be50a7fbb78b489a43086df0b03ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_apron_color_psd_ec2cd72e.mat using Guid(144be50a7fbb78b489a43086df0b03ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf180b7a6c42fdf8586f138864fdb28') in 0.154312 seconds
+  Time since last request: 0.001390 seconds.
+  path: Assets/Tiles/РљСѓР±.003.prefab
+  artifactKey: Guid(5f03df5aa3a5ed8419468e66c4d70877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/РљСѓР±.003.prefab using Guid(5f03df5aa3a5ed8419468e66c4d70877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50795f1f1d70598ec9c05bea66658b6d') in 0.034556 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_armleft_color_psd_a3e1b14.mat
-  artifactKey: Guid(6798f89f86787e34c959ed7b0d0d5879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_armleft_color_psd_a3e1b14.mat using Guid(6798f89f86787e34c959ed7b0d0d5879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1844a1713d2b45c3ed3a6381bb4a13c') in 0.014944 seconds
+  Time since last request: 12.415475 seconds.
+  path: Assets/Tiles/plane 5.prefab
+  artifactKey: Guid(148cda6ba8fcc044bad895b575b79889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/plane 5.prefab using Guid(148cda6ba8fcc044bad895b575b79889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a748fcfa23849067ad05873877b8334') in 0.065889 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 265
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_hook_color_psd_11f1f30b 1.mat
-  artifactKey: Guid(8d891dd147c78d24b9dfd0847c3eae27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_hook_color_psd_11f1f30b 1.mat using Guid(8d891dd147c78d24b9dfd0847c3eae27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b0f9a7ea27b698918fcb32d7f695666') in 0.028934 seconds
+  Time since last request: 16.268668 seconds.
+  path: Assets/Tiles/plane 5.prefab
+  artifactKey: Guid(148cda6ba8fcc044bad895b575b79889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/plane 5.prefab using Guid(148cda6ba8fcc044bad895b575b79889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84c5a134ab1fcb2e3f735ccb367f39e7') in 0.103517 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 284
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_body_color_psd_e676b3c.mat
-  artifactKey: Guid(8dccc44fb39d5a246b6c59be5665f3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_body_color_psd_e676b3c.mat using Guid(8dccc44fb39d5a246b6c59be5665f3cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b9ec27356e98b28907fbce927e4222c') in 0.019568 seconds
+  Time since last request: 47.880232 seconds.
+  path: Assets/Tiles/plane 5.prefab
+  artifactKey: Guid(148cda6ba8fcc044bad895b575b79889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/plane 5.prefab using Guid(148cda6ba8fcc044bad895b575b79889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f943af2df71e08adffe011f291ec28b') in 0.064419 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 286
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_waist_color_psd_512875b1 1.mat
-  artifactKey: Guid(c084aac5f2beb4f489394c613c2e46f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_waist_color_psd_512875b1 1.mat using Guid(c084aac5f2beb4f489394c613c2e46f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07e70f26650bf47c0524280aa2fd546f') in 0.020955 seconds
+  Time since last request: 2.462473 seconds.
+  path: Assets/Tiles/baza.prefab
+  artifactKey: Guid(8ff18ed19047a3d4ea8a75a9b209c663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/baza.prefab using Guid(8ff18ed19047a3d4ea8a75a9b209c663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36a60d543dd25c5193c42722cd338356') in 0.048602 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 50
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_chopper_color_psd_b9879740 1.mat
-  artifactKey: Guid(390ab9fa80cff7e4390d7749e3601e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_chopper_color_psd_b9879740 1.mat using Guid(390ab9fa80cff7e4390d7749e3601e4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00b6079e7d67c6bd6697832d06dc02ac') in 0.017867 seconds
+  Time since last request: 677.374154 seconds.
+  path: Assets/Tiles/Plane 7.prefab
+  artifactKey: Guid(abb0b1ab9fb4b7d4db8bca0b297427bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/Plane 7.prefab using Guid(abb0b1ab9fb4b7d4db8bca0b297427bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10e85ae688abc6edb1c937bf2dcdc04f') in 0.133160 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_bracer_color_psd_6dd1908c.mat
-  artifactKey: Guid(8245a8fefefe2e343a835573888ed2a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_bracer_color_psd_6dd1908c.mat using Guid(8245a8fefefe2e343a835573888ed2a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a01bd9043218ba8832b0bf4a3361c360') in 0.014112 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/texture/pudge/Materials/pudge2_hair_color_psd_3ca37cb.mat
-  artifactKey: Guid(6df8ec8b2d4f55a4e99e69698bf316f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/texture/pudge/Materials/pudge2_hair_color_psd_3ca37cb.mat using Guid(6df8ec8b2d4f55a4e99e69698bf316f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4c83ee6c98c1b87c4d0630a308db48') in 0.018033 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: Операция ввода/вывода была прервана из-за завершения потока команд или по запросу приложения.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 487
