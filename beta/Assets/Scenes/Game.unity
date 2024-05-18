@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+  m_FogColor: {r: 0.18039216, g: 0.39607847, b: 0.43137258, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 117
@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 31dc65b54c10f6e4782dfc2afc532897, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ed1387202b1349540a5d6464f0f27488, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.19529846, g: 0.23666689, b: 0.31031144, a: 1}
+  m_IndirectSpecularColor: {r: 0.013962174, g: 0.07175972, b: 0.09959307, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -921,7 +921,7 @@ Transform:
   m_GameObject: {fileID: 205564194}
   serializedVersion: 2
   m_LocalRotation: {x: 0.08117594, y: -0, z: -0, w: 0.9966998}
-  m_LocalPosition: {x: 0, y: 7.5, z: -8.48}
+  m_LocalPosition: {x: 0, y: 7.31, z: -7.32}
   m_LocalScale: {x: 1, y: 1, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1541,7 +1541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -902498857, guid: b7df2f6b4dbf50e4e98b7f2027e7bb83, type: 3}
+  m_Sprite: {fileID: 2133041841, guid: 646d00fa411cc92448422df0375efcc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1674,7 +1674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -902498857, guid: b7df2f6b4dbf50e4e98b7f2027e7bb83, type: 3}
+  m_Sprite: {fileID: 1836546455, guid: 646d00fa411cc92448422df0375efcc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1818,7 +1818,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 968974700, guid: b058af111074d8c4fbe6c94e40c430db, type: 3}
+  m_Sprite: {fileID: -834031693, guid: 646d00fa411cc92448422df0375efcc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -902498857, guid: b7df2f6b4dbf50e4e98b7f2027e7bb83, type: 3}
+  m_Sprite: {fileID: 2133041841, guid: 646d00fa411cc92448422df0375efcc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2504,8 +2504,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2713,8 +2713,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefabs:
-  - {fileID: 150332558932666029, guid: 148cda6ba8fcc044bad895b575b79889, type: 3}
+  - {fileID: 5414270773242483289, guid: 8ff18ed19047a3d4ea8a75a9b209c663, type: 3}
+  - {fileID: 150332558932666029, guid: 678dc6ed20bfb794fb58a33428aa3772, type: 3}
+  - {fileID: 150332558932666029, guid: 86705f636b3197a4b9a7d41837618fd2, type: 3}
   - {fileID: 9154411025335956257, guid: abb0b1ab9fb4b7d4db8bca0b297427bc, type: 3}
+  - {fileID: 150332558932666029, guid: 86705f636b3197a4b9a7d41837618fd2, type: 3}
   player: {fileID: 1172372125}
 --- !u!4 &1197281359
 Transform:
@@ -3239,7 +3242,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 83c642873e49a7f4bacd20551baa9662, type: 3}
+  m_Sprite: {fileID: 1895974578, guid: 646d00fa411cc92448422df0375efcc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3486,7 +3489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -902498857, guid: b7df2f6b4dbf50e4e98b7f2027e7bb83, type: 3}
+  m_Sprite: {fileID: 1836546455, guid: 646d00fa411cc92448422df0375efcc8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

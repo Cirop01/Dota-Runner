@@ -22,6 +22,7 @@ public class Records : MonoBehaviour
     {
         int coins = PlayerController.coins_all;
         coinsText.text = coins.ToString();
+        
     }
 
 }
