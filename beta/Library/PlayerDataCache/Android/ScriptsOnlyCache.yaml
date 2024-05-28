@@ -18,6 +18,8 @@ ScriptsOnlyBuild:
     - TileGenerator
     - btnFX
     - pause
+    Unity.PlasticSCM.Editor.dll:
+    - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -100,12 +102,12 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: Scene
-    methodName: SceneHistory
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: Scene
+    methodName: SceneHistory
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -146,14 +148,14 @@ ScriptsOnlyBuild:
     fullTypeName: pause
     methodName: Resume
   - assembly: Assembly-CSharp
-    fullTypeName: Scene
-    methodName: SceneHistory
-  - assembly: Assembly-CSharp
     fullTypeName: SoundBuy
     methodName: CantBuy
   - assembly: Assembly-CSharp
     fullTypeName: Buy
     methodName: ChangePrewious
+  - assembly: Assembly-CSharp
+    fullTypeName: Scene
+    methodName: SceneHistory
   - assembly: Assembly-CSharp
     fullTypeName: Buy
     methodName: UnLockScin
@@ -210,41 +212,41 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16688}
+      Script: {instanceID: 16702}
     - Class: 114
-      Script: {instanceID: 17702}
+      Script: {instanceID: 17720}
     - Class: 114
-      Script: {instanceID: 17906}
+      Script: {instanceID: 17924}
     - Class: 114
-      Script: {instanceID: 18198}
+      Script: {instanceID: 18220}
     - Class: 114
-      Script: {instanceID: 19088}
+      Script: {instanceID: 19112}
     - Class: 114
-      Script: {instanceID: 20164}
+      Script: {instanceID: 19774}
     - Class: 114
-      Script: {instanceID: 20716}
+      Script: {instanceID: 20194}
     - Class: 114
-      Script: {instanceID: 20874}
+      Script: {instanceID: 20202}
     - Class: 114
-      Script: {instanceID: 21198}
+      Script: {instanceID: 20320}
     - Class: 114
-      Script: {instanceID: 23154}
+      Script: {instanceID: 20600}
     - Class: 114
-      Script: {instanceID: 23158}
+      Script: {instanceID: 20752}
     - Class: 114
-      Script: {instanceID: 23170}
+      Script: {instanceID: 20910}
     - Class: 114
-      Script: {instanceID: 23178}
+      Script: {instanceID: 20964}
     - Class: 114
-      Script: {instanceID: 23182}
+      Script: {instanceID: 21236}
     - Class: 114
-      Script: {instanceID: 23194}
+      Script: {instanceID: 22022}
     - Class: 114
-      Script: {instanceID: 23208}
+      Script: {instanceID: 22486}
     - Class: 114
-      Script: {instanceID: 23228}
+      Script: {instanceID: 22490}
     - Class: 114
-      Script: {instanceID: 23236}
+      Script: {instanceID: 22894}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -260,6 +262,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -311,33 +315,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16688}
+      Script: {instanceID: 16702}
     - Class: 114
-      Script: {instanceID: 17702}
+      Script: {instanceID: 16830}
     - Class: 114
-      Script: {instanceID: 17906}
+      Script: {instanceID: 17720}
     - Class: 114
-      Script: {instanceID: 18198}
+      Script: {instanceID: 17924}
     - Class: 114
-      Script: {instanceID: 19088}
+      Script: {instanceID: 17940}
     - Class: 114
-      Script: {instanceID: 20164}
+      Script: {instanceID: 18206}
     - Class: 114
-      Script: {instanceID: 20716}
+      Script: {instanceID: 18220}
     - Class: 114
-      Script: {instanceID: 20874}
+      Script: {instanceID: 19112}
     - Class: 114
-      Script: {instanceID: 21198}
+      Script: {instanceID: 20194}
     - Class: 114
-      Script: {instanceID: 21912}
+      Script: {instanceID: 20752}
     - Class: 114
-      Script: {instanceID: 22528}
+      Script: {instanceID: 20910}
     - Class: 114
-      Script: {instanceID: 23162}
+      Script: {instanceID: 21236}
     - Class: 114
-      Script: {instanceID: 23174}
+      Script: {instanceID: 21956}
     - Class: 114
-      Script: {instanceID: 23200}
+      Script: {instanceID: 22582}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -398,51 +402,51 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16688}
+      Script: {instanceID: 16702}
     - Class: 114
-      Script: {instanceID: 17272}
+      Script: {instanceID: 16986}
     - Class: 114
-      Script: {instanceID: 17702}
+      Script: {instanceID: 17290}
     - Class: 114
-      Script: {instanceID: 17708}
+      Script: {instanceID: 17720}
     - Class: 114
-      Script: {instanceID: 17906}
+      Script: {instanceID: 17726}
     - Class: 114
-      Script: {instanceID: 18198}
+      Script: {instanceID: 17924}
     - Class: 114
-      Script: {instanceID: 18962}
+      Script: {instanceID: 17940}
     - Class: 114
-      Script: {instanceID: 19082}
+      Script: {instanceID: 18220}
     - Class: 114
-      Script: {instanceID: 19088}
+      Script: {instanceID: 18986}
     - Class: 114
-      Script: {instanceID: 19192}
+      Script: {instanceID: 19106}
     - Class: 114
-      Script: {instanceID: 19446}
+      Script: {instanceID: 19112}
     - Class: 114
-      Script: {instanceID: 20042}
+      Script: {instanceID: 19216}
     - Class: 114
-      Script: {instanceID: 20104}
+      Script: {instanceID: 19470}
     - Class: 114
-      Script: {instanceID: 20164}
+      Script: {instanceID: 20072}
     - Class: 114
-      Script: {instanceID: 20216}
+      Script: {instanceID: 20134}
     - Class: 114
-      Script: {instanceID: 20716}
+      Script: {instanceID: 20194}
     - Class: 114
-      Script: {instanceID: 20874}
+      Script: {instanceID: 20248}
     - Class: 114
-      Script: {instanceID: 21198}
+      Script: {instanceID: 20752}
     - Class: 114
-      Script: {instanceID: 21206}
+      Script: {instanceID: 20910}
     - Class: 114
-      Script: {instanceID: 22248}
+      Script: {instanceID: 21236}
     - Class: 114
-      Script: {instanceID: 22528}
+      Script: {instanceID: 21244}
     - Class: 114
-      Script: {instanceID: 23174}
+      Script: {instanceID: 22296}
     - Class: 114
-      Script: {instanceID: 23224}
+      Script: {instanceID: 22582}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -502,6 +506,12 @@ ScriptsOnlyBuild:
     className: LayoutElement
   - hash:
       serializedVersion: 2
+      Hash: c7f02eeb760c329763dc2cc88c12a119
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SoundBuy
+  - hash:
+      serializedVersion: 2
       Hash: 00bbd9db8634496d079d17711b2ff7c4
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -536,6 +546,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: 56961dee3ee6f126fab2c551c2066d4e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MusicOff
   - hash:
       serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
@@ -652,6 +668,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: b15f010b57a3f8d92cb5e0fdd855fbf3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Records
+  - hash:
+      serializedVersion: 2
       Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -704,6 +726,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 46e0818af0789fab9d7f6230f343063e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Buy
   - hash:
       serializedVersion: 2
       Hash: 915204dac8acad99f076d6e72ada0a0f
@@ -982,6 +1010,12 @@ ScriptsOnlyBuild:
     className: TMP_TextInfoDebugTool
   - hash:
       serializedVersion: 2
+      Hash: 1a7433edd5ecb6f8e899ddad75377d27
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SwipeController
+  - hash:
+      serializedVersion: 2
       Hash: 0b63f6d3335e11939ce8790b904c8691
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1036,6 +1070,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: b23314927a1dc59e6e505c0374e0178a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LeaveGame
+  - hash:
+      serializedVersion: 2
       Hash: 47ee34eb8b6021efa0289dbbb17a5a85
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1052,6 +1092,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: ShaderPropAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 5a7467afca40d709ff8ace800087238b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ForAnimaions
   - hash:
       serializedVersion: 2
       Hash: 10c17b309bdca62b4d7fbaf113ed4ca0
@@ -1108,6 +1154,12 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: 522ecaef16675a4f7107b1170a6362a9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AnimatorController
+  - hash:
+      serializedVersion: 2
       Hash: cb93ba6fcc5611d0c881bd14e6f9ab77
     assemblyName: Assembly-CSharp
     namespaceName: 
@@ -1118,6 +1170,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro
     className: TMP_DigitValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 27d30c786870b14ee6934f9f1df42ddc
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LosePanel
   - hash:
       serializedVersion: 2
       Hash: d82086405f46de14829f6b4bcbdd8fc9
@@ -1154,6 +1212,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: a619bc86c74ca7cd76570072a425e28d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraController
   - hash:
       serializedVersion: 2
       Hash: 35e0b31791c377513b6fc7b9568c50cd
@@ -1198,6 +1262,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 460d3f47908c4fb505d9ea5f3140c84c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TileGenerator
+  - hash:
+      serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1226,6 +1296,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 245256a6d022cdb6c59136a31a8cc513
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AnimController
   - hash:
       serializedVersion: 2
       Hash: 13f262cc0741566a7ab72682984bc3e1
@@ -1384,6 +1460,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 91c69ce076b156ce7cea4e7e66e00626
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Score
+  - hash:
+      serializedVersion: 2
       Hash: e2734bcc7b3e94776ade5d59f54fec1e
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1394,6 +1476,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: f2d14dc7457142e433626516f8c8b34c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ToMenu
   - hash:
       serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
@@ -1420,10 +1508,28 @@ ScriptsOnlyBuild:
     className: BackgroundMusicToggle
   - hash:
       serializedVersion: 2
+      Hash: 023831307d58c6d3b48a6d73f61db4cd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ToQuit
+  - hash:
+      serializedVersion: 2
       Hash: b9aee86f2167d83733f3d6e90be6cd06
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: AutomaticMovement
+  - hash:
+      serializedVersion: 2
+      Hash: e84ef0d4a28d2f778b21f7af9dfa2a2f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: 6232c6c31e1f4229380033cb05d2ec22
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: pause
   - hash:
       serializedVersion: 2
       Hash: 9a174471d4db2c0c6d3ac47d2f818db1
@@ -1468,6 +1574,12 @@ ScriptsOnlyBuild:
     className: TMP_PhoneNumberValidator
   - hash:
       serializedVersion: 2
+      Hash: bf553d9e73b452818d4a519e7ac9c90f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CoinMovement
+  - hash:
+      serializedVersion: 2
       Hash: c4ae0ec287bc3cde0bc98e1a65f9cef7
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1496,6 +1608,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexZoom
+  - hash:
+      serializedVersion: 2
+      Hash: b388820fd28ecc330555b7dc2ac230c3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ScinControll
   - hash:
       serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
@@ -1538,123 +1656,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 91c69ce076b156ce7cea4e7e66e00626
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Score
-  - hash:
-      serializedVersion: 2
-      Hash: 460d3f47908c4fb505d9ea5f3140c84c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TileGenerator
-  - hash:
-      serializedVersion: 2
-      Hash: 46e0818af0789fab9d7f6230f343063e
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Buy
-  - hash:
-      serializedVersion: 2
-      Hash: 023831307d58c6d3b48a6d73f61db4cd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ToQuit
-  - hash:
-      serializedVersion: 2
-      Hash: 1a7433edd5ecb6f8e899ddad75377d27
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SwipeController
-  - hash:
-      serializedVersion: 2
-      Hash: b15f010b57a3f8d92cb5e0fdd855fbf3
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Records
-  - hash:
-      serializedVersion: 2
-      Hash: 27d30c786870b14ee6934f9f1df42ddc
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LosePanel
-  - hash:
-      serializedVersion: 2
-      Hash: b388820fd28ecc330555b7dc2ac230c3
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ScinControll
-  - hash:
-      serializedVersion: 2
-      Hash: 245256a6d022cdb6c59136a31a8cc513
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AnimController
-  - hash:
-      serializedVersion: 2
-      Hash: 522ecaef16675a4f7107b1170a6362a9
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AnimatorController
-  - hash:
-      serializedVersion: 2
-      Hash: c7f02eeb760c329763dc2cc88c12a119
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SoundBuy
-  - hash:
-      serializedVersion: 2
-      Hash: f2d14dc7457142e433626516f8c8b34c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ToMenu
-  - hash:
-      serializedVersion: 2
-      Hash: 6232c6c31e1f4229380033cb05d2ec22
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: pause
-  - hash:
-      serializedVersion: 2
-      Hash: 5a7467afca40d709ff8ace800087238b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ForAnimaions
-  - hash:
-      serializedVersion: 2
-      Hash: b23314927a1dc59e6e505c0374e0178a
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LeaveGame
-  - hash:
-      serializedVersion: 2
-      Hash: bf553d9e73b452818d4a519e7ac9c90f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CoinMovement
-  - hash:
-      serializedVersion: 2
-      Hash: 56961dee3ee6f126fab2c551c2066d4e
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MusicOff
-  - hash:
-      serializedVersion: 2
-      Hash: a619bc86c74ca7cd76570072a425e28d
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraController
-  - hash:
-      serializedVersion: 2
-      Hash: e84ef0d4a28d2f778b21f7af9dfa2a2f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlayerController
   platform: 13
   scenePathNames:
   - Assets/Scenes/menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Shop.unity
-  playerPath: C:/Users/home/Desktop/eshkere.apk
+  playerPath: C:/Users/C1R0P/Desktop/1203103.apk
