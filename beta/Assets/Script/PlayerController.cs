@@ -27,14 +27,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     //    animate = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
         coins = PlayerPrefs.GetInt("coins");
         coinsResult.text = PlayerPrefs.GetInt("coins_all").ToString();
-        coins_all = PlayerPrefs.GetInt("coins_all");    
+        coins_all = PlayerPrefs.GetInt("coins_all");
     }
 
     void UpdateRunes()
