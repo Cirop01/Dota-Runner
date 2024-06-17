@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using GamePush;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
@@ -123,6 +123,7 @@ public class PlayerController : MonoBehaviour
 
             losePanel.SetActive(true);
             Time.timeScale = 0;
+            ShowFullscreen();
         }
     }
 
@@ -159,4 +160,10 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    
+    public void ShowFullscreen() => GP_Ads.ShowFullscreen(OnFullscreenStart, OnFullscreenClose);
+    
+    private void OnFullscreenStart() => Debug.Log("ON FULLSCREEN START");
+
+    private void OnFullscreenClose(bool success) => Debug.Log("ON FULLSCREEN CLOSE");
 }
