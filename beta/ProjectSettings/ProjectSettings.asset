@@ -566,6 +566,10 @@ PlayerSettings:
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
   m_TemplateCustomTags:
+    BANNER_DYNAMIC_1: 
+    BANNER_DYNAMIC_2: 
+    BANNER_STATIC_1: 
+    BANNER_STATIC_2: 
     GAMEREADY_AUTOCALL_DELAY: 0
     OVERLAY_BACKGROUND_COLOR: 
     PROGRESS_BAR_BACKGROUND_COLOR: 
@@ -588,6 +592,9 @@ PlayerSettings:
   - serializedVersion: 2
     m_BuildTarget: tvOS
     m_EncodingQuality: 1
+  - serializedVersion: 2
+    m_BuildTarget: WebGL
+    m_EncodingQuality: 0
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding:
@@ -601,6 +608,9 @@ PlayerSettings:
   - serializedVersion: 3
     m_BuildTarget: Android
     m_Formats: 03000000
+  - serializedVersion: 3
+    m_BuildTarget: WebGL
+    m_Formats: 05000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -846,7 +856,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: PROJECT:GamePush
+  webGLTemplate: PROJECT:PluginYG
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 1
