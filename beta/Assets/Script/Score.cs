@@ -7,7 +7,7 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] public TMP_Text scoreText;
+    [SerializeField] public Text scoreText;
     //[SerializeField] public TMP_Text scoreRecord;
 
     public static int best_score;

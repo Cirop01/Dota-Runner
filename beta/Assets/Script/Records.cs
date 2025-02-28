@@ -7,8 +7,8 @@ using TMPro;
 
 public class Records : MonoBehaviour
 {
-    [SerializeField] private TMP_Text coinsText;
-    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private Text coinsText;
+    [SerializeField] private Text scoreText;
 
     private void Start()
     {

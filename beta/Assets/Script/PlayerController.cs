@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
@@ -18,8 +17,8 @@ public class PlayerController : MonoBehaviour
     
     
     [SerializeField] private GameObject losePanel;
-    [SerializeField] private TMP_Text coinsText;
-    [SerializeField] private TMP_Text coinsResult;
+    [SerializeField] private Text coinsText;
+    [SerializeField] private Text coinsResult;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
     [SerializeField] private Score scoreScript;
