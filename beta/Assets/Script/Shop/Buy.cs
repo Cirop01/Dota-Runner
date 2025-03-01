@@ -14,9 +14,9 @@ public class Buy : MonoBehaviour
     public Button nobuyButton;
     public Button Select;
     public Button _Selected;
-    private PlayerController coins_all;
+    private int balance;
 
-
+    [SerializeField] public Text Price_text;
     void Start()
     {   
         foreach(ScinBlueprint sck in scins)
@@ -36,6 +36,7 @@ public class Buy : MonoBehaviour
 
     void Update()
     {
+        balance = PlayerPrefs.GetInt("coins_all");    
         UpdateUI();
         
     }
@@ -78,8 +79,8 @@ public class Buy : MonoBehaviour
         PlayerPrefs.SetInt(c.name, 1);
 //        PlayerPrefs.SetInt("SelectedScin", scinIndex);
         c.isUnlocked = true;
-        PlayerController.coins_all -= c.price;
-        PlayerPrefs.SetInt("coins_all", PlayerController.coins_all);
+        balance -= c.price;
+        PlayerPrefs.SetInt("coins_all", balance);
         
         
         
@@ -116,7 +117,8 @@ public class Buy : MonoBehaviour
 
             buyButton.gameObject.SetActive(true);
             nobuyButton.gameObject.SetActive(false);
-            buyButton.GetComponentInChildren<TextMeshProUGUI>().text = c.price.ToString();
+            Price_text.text = c.price.ToString();
+            
             if (PlayerPrefs.GetInt("coins_all", 0) > c.price)
             {
                 //buyButton.interactable = true;
@@ -128,7 +130,6 @@ public class Buy : MonoBehaviour
             {
                 //buyButton.interactable = false;
                 buyButton.gameObject.SetActive(false);
-                nobuyButton.GetComponentInChildren<TextMeshProUGUI>().text = c.price.ToString();
                 nobuyButton.gameObject.SetActive(true);
             }
 

@@ -3,26 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 
 public class Records : MonoBehaviour
 {
+    private static int Coins;
+    private static int Score;
+
     [SerializeField] private Text coinsText;
     [SerializeField] private Text scoreText;
 
-    private void Start()
-    {
-        int coins = PlayerController.coins_all;
-        coinsText.text = coins.ToString();
-        scoreText.text = PlayerPrefs.GetInt("best_score").ToString();
-
-    }
-
     private void Update()
     {
-        int coins = PlayerController.coins_all;
-        coinsText.text = coins.ToString();
-        
+        Coins = PlayerPrefs.GetInt("coins_all");
+        Score = PlayerPrefs.GetInt("best_score");
+        coinsText.text = Coins.ToString();
+        scoreText.text = Score.ToString();
     }
+
 
 }

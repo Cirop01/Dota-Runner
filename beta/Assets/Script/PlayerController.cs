@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using YG;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
@@ -10,28 +12,21 @@ public class PlayerController : MonoBehaviour
     private int lineToMove = 1;
     public float lineDistance = 4;
     private float maxSpeed = 90;
-    private int coins;
-    //public static int coins_all;
-    public static int coins_all = PlayerPrefs.GetInt("coins_all");
-    //public static int score_last;
+    public static int coins = 0;
     
     
     [SerializeField] private GameObject losePanel;
-    [SerializeField] private Text coinsText;
-    [SerializeField] private Text coinsResult;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
-    [SerializeField] private Score scoreScript;
     // Start is called before the first frame update
     void Start()
     {
+        coins = 0;
     //    animate = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
-        coins = PlayerPrefs.GetInt("coins");
-        coinsResult.text = PlayerPrefs.GetInt("coins_all").ToString();
-        coins_all = PlayerPrefs.GetInt("coins_all");
+       
     }
 
     void UpdateRunes()
@@ -121,6 +116,7 @@ public class PlayerController : MonoBehaviour
 
             losePanel.SetActive(true);
             Time.timeScale = 0;
+            YandexGame.FullscreenShow();
         }
     }
 
@@ -128,15 +124,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Coin")
         {
-            coins++; 
-            coinsText.text = coins.ToString();
-            coinsResult.text = coins.ToString();
+            coins+=1; 
             Destroy(other.gameObject);
-            PlayerPrefs.SetInt("coins", coins);
-            coins_all += 1;
-            PlayerPrefs.SetInt("coins_all", coins_all);
-            //coins_all += 1;
-
         }
 
     }

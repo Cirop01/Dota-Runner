@@ -8,7 +8,12 @@ public class Shop : MonoBehaviour
     public int price, access;
     public GameObject block;
     
-    
+    public static int balance;
+
+    void Start()
+    {
+        balance = PlayerPrefs.GetInt("coins_all");
+    }
     void Awake()
     {
         Popa();
@@ -23,13 +28,13 @@ public class Shop : MonoBehaviour
     }
     public void OnButtonDown()
     {
-        int coins = PlayerController.coins_all;
         if(access == 0)
         {
-            if(PlayerController.coins_all >= price)
+            if(balance >= price)
             {
                 PlayerPrefs.SetInt(objectName + "Access", 1);
-                PlayerController.coins_all = PlayerController.coins_all - price;
+                balance = balance - price;
+                PlayerPrefs.SetInt("coins_all", balance);
                 Popa();
             }
         }
