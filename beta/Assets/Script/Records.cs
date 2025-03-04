@@ -11,13 +11,16 @@ public class Records : MonoBehaviour
 
     [SerializeField] private Text coinsText;
     [SerializeField] private Text scoreText;
-
+    private void Start()
+    {
+        Score = PlayerPrefs.GetInt("best_score");
+        scoreText.text = Score.ToString();    
+    }
     private void Update()
     {
         Coins = PlayerPrefs.GetInt("coins_all");
-        Score = PlayerPrefs.GetInt("best_score");
-        coinsText.text = Coins.ToString();
-        scoreText.text = Score.ToString();
+        coinsText.text = Coins.ToString();  
+        
     }
 
 

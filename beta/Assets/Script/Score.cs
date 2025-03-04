@@ -15,39 +15,45 @@ public class Score : MonoBehaviour
     public static int last_score;
     public static int last_money;
     public static int final_money;
+    public static int last_money_res;
     private void Start()
     {
+        best_score = PlayerPrefs.GetInt("best_score");
         got_all_money = PlayerPrefs.GetInt("coins_all");
-        best_score = PlayerPrefs.GetInt("best_score", best_score);
+    }
+    private void LoadSaveCloud()
+    {
+
     }
 
     private void Update()
     {
-        
         last_score = (int)(player.position.z / 7);
-        scoreText.text = last_score.ToString();
         last_money = PlayerController.coins;
+        scoreText.text = last_score.ToString();
 
         if (Time.timeScale == 0)
         {
             SetRecords();
-            
+
         }
         final_money = got_all_money + last_money;
         PlayerPrefs.SetInt("coins_all", final_money);
+
     }
 
     private void SetRecords()
     {
-        
-        coinsText.text = last_money.ToString();
+
+
         if (last_score > best_score)
         {
             best_score = last_score;
             PlayerPrefs.SetInt("best_score", best_score);
         }
-        YandexGame.savesData.best_score = PlayerPrefs.GetInt("best_score");
-        YandexGame.savesData.coins = PlayerPrefs.GetInt("coins_all");
-        YandexGame.SaveProgress();
+        // YandexGame.savesData.best_score = PlayerPrefs.GetInt("best_score");
+        // YandexGame.savesData.coins = PlayerPrefs.GetInt("coins_all");
+        // YandexGame.SaveProgress();
+        // YandexGame.NewLeaderboardScores("MainLeaderboard", PlayerPrefs.GetInt("best_score"));
     }
 }

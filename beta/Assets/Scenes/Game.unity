@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 37703716}
   - component: {fileID: 37703718}
   - component: {fileID: 37703717}
+  - component: {fileID: 37703719}
   m_Layer: 5
   m_Name: "\u0418\u0442\u043E\u0433 \u0440\u0430\u0441\u0442"
   m_TagString: Untagged
@@ -190,7 +191,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0418\u0442\u043E\u0433\u043E\u0432\u043E\u0435 \u0440\u0430\u0441\u0442\u043E\u044F\u043D\u0438\u0435"
+  m_Text: "\u0424\u0438\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u0441\u0447\u0451\u0442"
 --- !u!222 &37703718
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -199,6 +200,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37703715}
   m_CullTransparentMesh: 1
+--- !u!114 &37703719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37703715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUIComponent: {fileID: 37703717}
+  textMeshComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0424\u0438\u043D\u0430\u043B\u044C\u043D\u044B\u0439 \u0441\u0447\u0451\u0442"
+  en: Final score
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 1
+  countLang: 0
 --- !u!1 &64575224
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +365,7 @@ GameObject:
   - component: {fileID: 65117420}
   - component: {fileID: 65117422}
   - component: {fileID: 65117421}
+  - component: {fileID: 65117423}
   m_Layer: 5
   m_Name: "\u0437\u0430\u043D\u043E\u0432\u043E"
   m_TagString: Untagged
@@ -383,6 +434,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65117419}
   m_CullTransparentMesh: 1
+--- !u!114 &65117423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65117419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUIComponent: {fileID: 65117421}
+  textMeshComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0417\u0430\u043D\u043E\u0432\u043E"
+  en: Restart
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 1
+  countLang: 0
 --- !u!1 &73077064
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 279752946}
+  - component: {fileID: 279752947}
   m_Layer: 5
   m_Name: scor\coins
   m_TagString: Untagged
@@ -784,11 +885,26 @@ RectTransform:
   - {fileID: 508498863}
   m_Father: {fileID: 64575228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 542, y: -1206}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &279752947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279752945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01648d56446fa834585fcf644054c927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1172372125}
+  scoreText: {fileID: 418305104}
+  coinsText: {fileID: 0}
 --- !u!1 &418305101
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +1011,7 @@ GameObject:
   - component: {fileID: 423049673}
   - component: {fileID: 423049675}
   - component: {fileID: 423049674}
+  - component: {fileID: 423049676}
   m_Layer: 5
   m_Name: "\u043C\u0435\u043D\u044E"
   m_TagString: Untagged
@@ -963,6 +1080,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423049672}
   m_CullTransparentMesh: 1
+--- !u!114 &423049676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423049672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUIComponent: {fileID: 423049674}
+  textMeshComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041C\u0435\u043D\u044E"
+  en: Menu
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 1
+  countLang: 0
 --- !u!1 &432880280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1647,7 @@ GameObject:
   - component: {fileID: 723087982}
   - component: {fileID: 723087984}
   - component: {fileID: 723087983}
+  - component: {fileID: 723087985}
   m_Layer: 5
   m_Name: "\u0418\u0442\u043E\u0433 \u0440\u0430\u0441\u0442"
   m_TagString: Untagged
@@ -1541,7 +1708,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0418\u0442\u043E\u0433\u043E\u0432\u044B\u0435 \u0440\u0443\u043D\u044B"
+  m_Text: "\u0421\u043E\u0431\u0440\u0430\u043D\u043E \u0440\u0443\u043D"
 --- !u!222 &723087984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1550,6 +1717,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723087981}
   m_CullTransparentMesh: 1
+--- !u!114 &723087985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723087981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUIComponent: {fileID: 723087983}
+  textMeshComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u0421\u043E\u0431\u0440\u0430\u043D\u043E \u0440\u0443\u043D"
+  en: Collected runes
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 1
+  countLang: 0
 --- !u!1 &828414320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +2091,7 @@ GameObject:
   - component: {fileID: 970010435}
   - component: {fileID: 970010437}
   - component: {fileID: 970010436}
+  - component: {fileID: 970010438}
   m_Layer: 5
   m_Name: "\u0437\u0430\u043D\u043E\u0432\u043E"
   m_TagString: Untagged
@@ -1943,6 +2160,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970010434}
   m_CullTransparentMesh: 1
+--- !u!114 &970010438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970010434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUIComponent: {fileID: 970010436}
+  textMeshComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041C\u0435\u043D\u044E"
+  en: Menu
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 0
+  countLang: 0
 --- !u!1 &970946938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 45
+  Coins_counter1: {fileID: 1325445534}
+  Coins_counter2: {fileID: 235055265}
   lineDistance: 4.4
   losePanel: {fileID: 1417200758}
   jumpForce: 30
@@ -2470,7 +2738,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 000
+  m_Text: 
 --- !u!222 &1325445535
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2490,6 +2758,7 @@ GameObject:
   - component: {fileID: 1351810961}
   - component: {fileID: 1351810963}
   - component: {fileID: 1351810962}
+  - component: {fileID: 1351810964}
   m_Layer: 5
   m_Name: "\u0414\u0430\u043B\u044C\u0448\u0435"
   m_TagString: Untagged
@@ -2558,6 +2827,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351810960}
   m_CullTransparentMesh: 1
+--- !u!114 &1351810964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351810960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textUIComponent: {fileID: 1351810962}
+  textMeshComponent: {fileID: 0}
+  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  text: 
+  ru: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+  en: Resume
+  tr: 
+  az: 
+  be: 
+  he: 
+  hy: 
+  ka: 
+  et: 
+  fr: 
+  kk: 
+  ky: 
+  lt: 
+  lv: 
+  ro: 
+  tg: 
+  tk: 
+  uk: 
+  uz: 
+  es: 
+  pt: 
+  ar: 
+  id: 
+  ja: 
+  it: 
+  de: 
+  hi: 
+  fontNumber: 0
+  uniqueFont: {fileID: 0}
+  textHeight: 20
+  processTranslateLabel: 
+  componentTextField: 1
+  countLang: 0
 --- !u!114 &1394855379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4778,7 +5096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &919132149352252222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,7 +5330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1031287611937087697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11531,7 +11849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5714878288007190154
 Transform:
   m_ObjectHideFlags: 0

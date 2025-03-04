@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Buy : MonoBehaviour
 {
@@ -96,6 +95,7 @@ public class Buy : MonoBehaviour
     private void UpdateUI()
     {
         ScinBlueprint c = scins[scinIndex];
+        Price_text.text = c.price.ToString();
         if(c.isUnlocked)
         {
             buyButton.gameObject.SetActive(false);
@@ -117,7 +117,7 @@ public class Buy : MonoBehaviour
 
             buyButton.gameObject.SetActive(true);
             nobuyButton.gameObject.SetActive(false);
-            Price_text.text = c.price.ToString();
+            
             
             if (PlayerPrefs.GetInt("coins_all", 0) > c.price)
             {

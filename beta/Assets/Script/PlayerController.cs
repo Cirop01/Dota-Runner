@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 dir;
     //private Animator animate;
     [SerializeField] private int speed;
+    [SerializeField] private Text Coins_counter1;
+    [SerializeField] private Text Coins_counter2;
     private int lineToMove = 1;
     public float lineDistance = 4;
     private float maxSpeed = 90;
@@ -38,7 +40,6 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
 
-        
         
         
         if (SwipeController.swipeRight)
@@ -90,8 +91,7 @@ public class PlayerController : MonoBehaviour
 
 
     // Update is called once per frame
-    void FixedUpdate()
-
+    private void FixedUpdate()
     {
         dir.z = speed;
         dir.y += gravity * Time.fixedDeltaTime;
@@ -124,7 +124,10 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Coin")
         {
-            coins+=1; 
+            coins+=1;
+            PlayerPrefs.SetInt("coins_while", coins);
+            Coins_counter1.text = coins.ToString();
+            Coins_counter2.text = coins.ToString();
             Destroy(other.gameObject);
         }
 
