@@ -36,7 +36,7 @@ public class RewardedVideo : MonoBehaviour
     {
         coins += 100;
         PlayerPrefs.SetInt("coins_all", coins);
-        YandexGame.savesData.coins = PlayerPrefs.GetInt("coins_all");
-        YandexGame.SaveProgress();
+        // YandexGame.savesData.coins = PlayerPrefs.GetInt("coins_all");
+        // YandexGame.SaveProgress();
     }
 }

@@ -1,63 +1,23 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.Events;
 
 namespace YG
 {
     public class ReviewYG : MonoBehaviour
     {
-        [Tooltip("Îòêðûâàòü îêíî àâòîðèçàöèè, åñëè ïîëüçîâàòåëü íå àâòîðèçîâàí.")]
-        public bool authDialog;
-        [Tooltip("Àêòèâèðîâàòü îöåíêó èãðû íà ìîáèëüíûõ óñòðîéñòâàõ? Íà ìîáèëüíûõ óñòðîéñòâàõ îòêðûòèå îêíà äëÿ îöåíêè ìîæåò âûçûâàòü çàâèñàíèå èãðû!")]
+        [Tooltip("ÐžÑ‚ÐºÑ€Ñ‹Ð²Ð°Ñ‚ÑŒ Ð¾ÐºÐ½Ð¾ Ð°Ð²Ñ‚Ð¾Ñ€Ð¸Ð·Ð°Ñ†Ð¸Ð¸, ÐµÑÐ»Ð¸ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ Ð½Ðµ Ð°Ð²Ñ‚Ð¾Ñ€Ð¸Ð·Ð¾Ð²Ð°Ð½.")]
+        public enum ForUnauthorized { OpenAuthDialog, ReviewNotAvailable, Ignore };
+        public ForUnauthorized forUnauthorized;
+
+        [Tooltip("ÐÐºÑ‚Ð¸Ð²Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð¾Ñ†ÐµÐ½ÐºÑƒ Ð¸Ð³Ñ€Ñ‹ Ð½Ð° Ð¼Ð¾Ð±Ð¸Ð»ÑŒÐ½Ñ‹Ñ… ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°Ñ…?")]
         public bool showOnMobileDevice;
+
+        [Tooltip("ÐžÐ±Ð½Ð¾Ð²Ð»ÑÑ‚ÑŒ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑŽ Ð¿Ñ€Ð¸ ÐºÐ°Ð¶Ð´Ð¾Ð¹ Ð°ÐºÑ‚Ð¸Ð²Ð°Ñ†Ð¸Ð¸ Ð¾Ð±ÑŠÐµÐºÑ‚Ð° (Ð² OnEnable)?")]
+        public bool updateDataOnEnable;
         [Space(15)]
         public UnityEvent ReviewAvailable;
         public UnityEvent ReviewNotAvailable;
         public UnityEvent LeftReview;
         public UnityEvent NotLeftReview;
-
-        private void Awake() => ReviewNotAvailable.Invoke();
-
-        private void OnEnable()
-        {
-            YandexGame.GetDataEvent += UpdateData;
-            YandexGame.ReviewSentEvent += ReviewSent;
-
-            if (YandexGame.SDKEnabled) UpdateData();
-        }
-        private void OnDisable()
-        {
-            YandexGame.GetDataEvent -= UpdateData;
-            YandexGame.ReviewSentEvent -= ReviewSent;
-        }
-
-        public void UpdateData()
-        {
-#if UNITY_EDITOR
-            YandexGame.EnvironmentData.reviewCanShow = true;
-#endif
-
-            if (!showOnMobileDevice && (YandexGame.EnvironmentData.isMobile || YandexGame.EnvironmentData.isTablet))
-                YandexGame.EnvironmentData.reviewCanShow = false;
-
-            if (!authDialog && !YandexGame.auth)
-            {
-                ReviewNotAvailable.Invoke();
-                return;
-            }
-
-            if (YandexGame.EnvironmentData.reviewCanShow)
-                ReviewAvailable.Invoke();
-            else ReviewNotAvailable.Invoke();
-        }
-
-        void ReviewSent(bool sent)
-        {
-            if (sent) LeftReview.Invoke();
-            else NotLeftReview.Invoke();
-
-            ReviewNotAvailable.Invoke();
-        }
-
-        public void ReviewShow() => YandexGame.ReviewShow(authDialog);
     }
 }

@@ -1,81 +1,26 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.Events;
 
 namespace YG
 {
+#if PLUGIN_YG_2 && GameLabel_yg
+    public class PromptYG : GameLabelYG
+    {
+    }
+#else
     public class PromptYG : MonoBehaviour
     {
         [Header("Buttons serialize")]
-        [Tooltip("Îáúåêò (îòêëþ÷¸ííàÿ êíîïêà èëè òåêñò), êîòîðûé áóäåò ñîîáùàòü î òîì, ÷òî ÿðëûê íå ïîääåðæèâàåòñÿ. Äàííûé îáúåêò ìîæíî íå óêàçûâàòü, òîãäà, åñëè ÿðëûê íå áóäåò ïîääåðæèâàòüñÿ - íè÷åãî íå áóäåò îòîáðàæàòüñÿ.")]
+        [Tooltip("ÐžÐ±ÑŠÐµÐºÑ‚ (Ð¾Ñ‚ÐºÐ»ÑŽÑ‡Ñ‘Ð½Ð½Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ° Ð¸Ð»Ð¸ Ñ‚ÐµÐºÑÑ‚), ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð±ÑƒÐ´ÐµÑ‚ ÑÐ¾Ð¾Ð±Ñ‰Ð°Ñ‚ÑŒ Ð¾ Ñ‚Ð¾Ð¼, Ñ‡Ñ‚Ð¾ ÑÑ€Ð»Ñ‹Ðº Ð½Ðµ Ð¿Ð¾Ð´Ð´ÐµÑ€Ð¶Ð¸Ð²Ð°ÐµÑ‚ÑÑ. Ð”Ð°Ð½Ð½Ñ‹Ð¹ Ð¾Ð±ÑŠÐµÐºÑ‚ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ðµ ÑƒÐºÐ°Ð·Ñ‹Ð²Ð°Ñ‚ÑŒ, Ñ‚Ð¾Ð³Ð´Ð°, ÐµÑÐ»Ð¸ ÑÑ€Ð»Ñ‹Ðº Ð½Ðµ Ð±ÑƒÐ´ÐµÑ‚ Ð¿Ð¾Ð´Ð´ÐµÑ€Ð¶Ð¸Ð²Ð°Ñ‚ÑŒÑÑ - Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð±ÑƒÐ´ÐµÑ‚ Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°Ñ‚ÑŒÑÑ.")]
         public GameObject notSupported;
-        [Tooltip("Îáúåêò (îòêëþ÷¸ííàÿ êíîïêà èëè òåêñò), êîòîðûé áóäåò ñîîáùàòü î òîì, ÷òî ÿðëûê óæå óñòàíîâëåí. Äàííûé îáúåêò ìîæíî íå óêàçûâàòü, òîãäà, åñëè ÿðëûê óæå óñòàíîâëåí - íè÷åãî íå áóäåò îòîáðàæàòüñÿ.")]
+        [Tooltip("ÐžÐ±ÑŠÐµÐºÑ‚ (Ð¾Ñ‚ÐºÐ»ÑŽÑ‡Ñ‘Ð½Ð½Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ° Ð¸Ð»Ð¸ Ñ‚ÐµÐºÑÑ‚), ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð±ÑƒÐ´ÐµÑ‚ ÑÐ¾Ð¾Ð±Ñ‰Ð°Ñ‚ÑŒ Ð¾ Ñ‚Ð¾Ð¼, Ñ‡Ñ‚Ð¾ ÑÑ€Ð»Ñ‹Ðº ÑƒÐ¶Ðµ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½. Ð”Ð°Ð½Ð½Ñ‹Ð¹ Ð¾Ð±ÑŠÐµÐºÑ‚ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ðµ ÑƒÐºÐ°Ð·Ñ‹Ð²Ð°Ñ‚ÑŒ, Ñ‚Ð¾Ð³Ð´Ð°, ÐµÑÐ»Ð¸ ÑÑ€Ð»Ñ‹Ðº ÑƒÐ¶Ðµ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½ - Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð±ÑƒÐ´ÐµÑ‚ Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶Ð°Ñ‚ÑŒÑÑ.")]
         public GameObject done;
-        [Tooltip("Îáúåêò ñ êíîïêîé, êîòîðàÿ áóäåò ïðåäëàãàòü óñòàíîâèòü ÿðëûê íà ðàáî÷èé ñòîë (âîçìîæíî, çà âîçíàãðàæäåíèå). Ïðè êëèêå íà êíîïêó íåîáõîäèìî çàïóñêàòü ìåòîä PromptShow ÷åðåç äàííûé ñêðèïò èëè ÷åðåç YandexGame ñêðèïò.")]
+        [Tooltip("ÐžÐ±ÑŠÐµÐºÑ‚ Ñ ÐºÐ½Ð¾Ð¿ÐºÐ¾Ð¹, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ Ð±ÑƒÐ´ÐµÑ‚ Ð¿Ñ€ÐµÐ´Ð»Ð°Ð³Ð°Ñ‚ÑŒ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ ÑÑ€Ð»Ñ‹Ðº Ð½Ð° Ñ€Ð°Ð±Ð¾Ñ‡Ð¸Ð¹ ÑÑ‚Ð¾Ð» (Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾, Ð·Ð° Ð²Ð¾Ð·Ð½Ð°Ð³Ñ€Ð°Ð¶Ð´ÐµÐ½Ð¸Ðµ). ÐŸÑ€Ð¸ ÐºÐ»Ð¸ÐºÐµ Ð½Ð° ÐºÐ½Ð¾Ð¿ÐºÑƒ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð·Ð°Ð¿ÑƒÑÐºÐ°Ñ‚ÑŒ Ð¼ÐµÑ‚Ð¾Ð´ PromptShow Ñ‡ÐµÑ€ÐµÐ· Ð´Ð°Ð½Ð½Ñ‹Ð¹ ÑÐºÑ€Ð¸Ð¿Ñ‚ Ð¸Ð»Ð¸ Ñ‡ÐµÑ€ÐµÐ· YandexGame ÑÐºÑ€Ð¸Ð¿Ñ‚.")]
         public GameObject showDialog;
         [Header("Events")]
         [Space(5)]
         public UnityEvent onPromptSuccess;
         public UnityEvent onPromptFail;
-
-        private void Awake()
-        {
-            if (notSupported) notSupported.SetActive(false);
-            if (done) done.SetActive(false);
-            showDialog.SetActive(false);
-        }
-
-        private void OnEnable()
-        {
-            YandexGame.GetDataEvent += UpdateData;
-            YandexGame.PromptSuccessEvent += OnPromptSuccess;
-            YandexGame.PromptFailEvent += OnPromptFail;
-
-            if (YandexGame.SDKEnabled) UpdateData();
-        }
-        private void OnDisable()
-        {
-            YandexGame.GetDataEvent -= UpdateData;
-            YandexGame.PromptSuccessEvent -= OnPromptSuccess;
-            YandexGame.PromptFailEvent -= OnPromptFail;
-        }
-
-        public void UpdateData()
-        {
-#if UNITY_EDITOR
-            YandexGame.EnvironmentData.promptCanShow = true;
-#endif
-            if (YandexGame.savesData.promptDone)
-            {
-                if (notSupported) notSupported.SetActive(false);
-                if (done) done.SetActive(true);
-                showDialog.SetActive(false);
-            }
-            else if (!YandexGame.EnvironmentData.promptCanShow)
-            {
-                if (notSupported) notSupported.SetActive(true);
-                if (done) done.SetActive(false);
-                showDialog.SetActive(false);
-            }
-            else
-            {
-                if (notSupported) notSupported.SetActive(false);
-                if (done) done.SetActive(false);
-                showDialog.SetActive(true);
-            }
-        }
-
-        public void PromptShow() => YandexGame.PromptShow();
-
-        void OnPromptSuccess()
-        {
-            onPromptSuccess?.Invoke();
-            UpdateData();
-        }
-        void OnPromptFail()
-        {
-            YandexGame.EnvironmentData.promptCanShow = false;
-            onPromptFail?.Invoke();
-            UpdateData();
-        }
     }
+#endif
 }

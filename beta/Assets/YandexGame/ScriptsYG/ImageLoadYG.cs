@@ -1,47 +1,90 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.Networking;
 
 namespace YG
 {
+    [DefaultExecutionOrder(-1)]
     public class ImageLoadYG : MonoBehaviour
     {
-        public bool startLoad = true;
+        public bool startLoad;
+#if PLUGIN_YG_2
+        [NestedYG("startLoad")]
+#endif
+        public string urlImage;
+
         public RawImage rawImage;
         public Image spriteImage;
-        public string urlImage;
         public GameObject loadAnimObj;
-        [Tooltip("Вы можете выключить запись лога в консоль.")]
-        [SerializeField] bool debug;
+        [SerializeField] bool log;
+
+        private struct LoadTextures { public string link; public Texture2D texture; }
+        private static List<LoadTextures> saveTextures = new List<LoadTextures>();
 
         private void Awake()
         {
-            if (rawImage) rawImage.enabled = false;
-            if (spriteImage) spriteImage.enabled = false;
+            if (rawImage)
+                rawImage.enabled = false;
+            if (spriteImage)
+                spriteImage.enabled = false;
 
-            if (startLoad) Load();
-            else if (loadAnimObj) loadAnimObj.SetActive(false);
-        }
-
-        public void Load()
-        {
-            if (loadAnimObj) loadAnimObj.SetActive(true);
-            StartCoroutine(SwapPlayerPhoto(urlImage));
+            if (startLoad)
+                Load();
+            else if (loadAnimObj)
+                loadAnimObj.SetActive(false);
         }
 
         public void Load(string url)
         {
-            if (url != "null")
+            if (url == "null" && url == null && url == string.Empty)
+                return;
+
+            Texture2D existingTexture = ExistingTexture(url);
+            if (existingTexture)
+                SetTexture(existingTexture);
+            else
+                StartCoroutine(LoadTexture(url));
+        }
+        public void Load() => Load(urlImage);
+
+        private Texture2D ExistingTexture(string url)
+        {
+            List<LoadTextures> images = saveTextures;
+
+            for (int i = 0; i < images.Count; i++)
             {
-                if (loadAnimObj) loadAnimObj.SetActive(true);
-                StartCoroutine(SwapPlayerPhoto(url));
+                if (url == images[i].link)
+                    return images[i].texture;
             }
+
+            return null;
         }
 
-        IEnumerator SwapPlayerPhoto(string url)
+        public void ClearTexture()
         {
-#if UNITY_2020_1_OR_NEWER
+            if (rawImage)
+            {
+                rawImage.texture = null;
+                rawImage.enabled = false;
+            }
+
+            if (spriteImage)
+            {
+                spriteImage.sprite = null;
+                spriteImage.enabled = false;
+            }
+
+            if (loadAnimObj)
+                loadAnimObj.SetActive(false);
+        }
+
+        IEnumerator LoadTexture(string url)
+        {
+            if (loadAnimObj)
+                loadAnimObj.SetActive(true);
+
             using (UnityWebRequest webRequest = UnityWebRequestTexture.GetTexture(url))
             {
                 yield return webRequest.SendWebRequest();
@@ -49,52 +92,51 @@ namespace YG
                 if (webRequest.result == UnityWebRequest.Result.ConnectionError ||
                     webRequest.result == UnityWebRequest.Result.DataProcessingError)
                 {
-                    if (debug)
-                        Debug.LogError("Error: " + webRequest.error);
+                    if (log)
+                        Debug.LogError("ImageLoadYG Error: " + webRequest.error);
                 }
                 else
                 {
                     DownloadHandlerTexture handlerTexture = webRequest.downloadHandler as DownloadHandlerTexture;
 
-                    if (rawImage)
+                    if (handlerTexture.isDone)
                     {
-                        if (handlerTexture.isDone)
-                            rawImage.texture = handlerTexture.texture;
-                        rawImage.enabled = true;
+                        Texture2D existingTexture = ExistingTexture(url);
+                        if (existingTexture)
+                        {
+                            SetTexture(existingTexture);
+                        }
+                        else
+                        {
+                            SetTexture(handlerTexture.texture);
+                            saveTextures.Add(new LoadTextures
+                            {
+                                link = url,
+                                texture = handlerTexture.texture
+                            });
+                        }
                     }
-
-                    if (spriteImage)
-                    {
-                        if (handlerTexture.isDone)
-                            spriteImage.sprite = Sprite.Create((Texture2D)handlerTexture.texture,
-                                new Rect(0, 0, handlerTexture.texture.width, handlerTexture.texture.height), Vector2.zero);
-
-                        spriteImage.enabled = true;
-                    }
-
-                    if (loadAnimObj)
-                        loadAnimObj.SetActive(false);
                 }
             }
-#endif
-#if !UNITY_2020_1_OR_NEWER
-#pragma warning disable CS0618 // Тип или член устарел
-            using (WWW www = new WWW(url))
-#pragma warning restore CS0618 // Тип или член устарел
+        }
+
+        public void SetTexture(Texture2D texture)
+        {
+            if (rawImage)
             {
-                yield return www;
-                Texture2D texture = www.texture;
-
                 rawImage.texture = texture;
-
-                byte[] bytes = texture.EncodeToJPG();
-
-                File.WriteAllBytes(Application.persistentDataPath + "LoadImage.jpg", bytes);
+                rawImage.enabled = true;
             }
 
-            rawImage.enabled = true;
-            if (loadAnimObj) loadAnimObj.SetActive(false);
-#endif
+            if (spriteImage)
+            {
+                Rect rect = new Rect(0, 0, texture.width, texture.height);
+                spriteImage.sprite = Sprite.Create(texture, rect, Vector2.zero);
+                spriteImage.enabled = true;
+            }
+
+            if (loadAnimObj)
+                loadAnimObj.SetActive(false);
         }
     }
 }

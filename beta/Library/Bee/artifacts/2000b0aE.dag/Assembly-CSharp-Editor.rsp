@@ -103,6 +103,9 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+-define:PLUGIN_YG_2
+-define:TMP_YG2
+-define:NJSON_YG2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -define:UNITY_EDITOR_ONLY_COMPILATION
@@ -415,22 +418,31 @@
 -analyzer:"D:/Apps/Unity Editor/6000.0.39f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Apps/Unity Editor/6000.0.39f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/Apps/Unity Editor/6000.0.39f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/YandexGame/ScriptsYG/Editor/AutoLocalizationMasseWindow.cs"
-"Assets/YandexGame/ScriptsYG/Editor/BannerYGEditor.cs"
-"Assets/YandexGame/ScriptsYG/Editor/CreateYandexGameEditor.cs"
-"Assets/YandexGame/ScriptsYG/Editor/CSVFileEditorWindow.cs"
-"Assets/YandexGame/ScriptsYG/Editor/CSVManager.cs"
-"Assets/YandexGame/ScriptsYG/Editor/FontMasseInstallEditorWindow.cs"
-"Assets/YandexGame/ScriptsYG/Editor/LanguageYGEditor.cs"
-"Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ArchivingBuild.cs"
-"Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/AdWhenLoadingGame.cs"
-"Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/BakcgroundFormat.cs"
-"Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/MetricaCounterID.cs"
-"Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/ModifyIndexFile.cs"
-"Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/ModifyIndexFile/PixelRatioMobile.cs"
-"Assets/YandexGame/ScriptsYG/Editor/PostProcessBuild/PostProcessBuild.cs"
-"Assets/YandexGame/ScriptsYG/Editor/TranslationTableEditorWindow.cs"
-"Assets/YandexGame/ScriptsYG/UnityToolbag-main/ConditionallyVisiblePropertyDrawer/Editor/ConditionallyVisiblePropertyDrawer.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/AspectRatio/AspectRatio_build.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/BackgroundFormat.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/GradientBackground/GradientBackground_build.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/LogoFormat.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/PixelRatioMobile.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/ProgressBar/ProgressBar_build.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/SyncInitSDK.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/TestLabel/TestLabel_build.cs"
+"Assets/PluginYourGames/Platforms/YandexGames/Scripts/OwnHost/Editor/OwnHostEditor.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/BuildModify/ArchivingBuild.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/BuildModify/BuildLog.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/BuildModify/ModifyBuild.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/BuildModify/ProcessBuild.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/DocumentationEditor.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/EditorUtils.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/FastButton.cs"
+"Assets/PluginYourGames/Scripts/EditorScr/Editor/YGEditorStyles.cs"
+"Assets/PluginYourGames/Scripts/InfoYG/Editor/ExampleScenes.cs"
+"Assets/PluginYourGames/Scripts/InfoYG/Editor/InfoYGEditorWindow.cs"
+"Assets/PluginYourGames/Scripts/Other/Editor/EventsYG2Editor.cs"
+"Assets/PluginYourGames/Scripts/Other/Editor/PlatformEventsYG2Editor.cs"
+"Assets/PluginYourGames/Scripts/Platform/Editor/PlatformSettingsEditor.cs"
+"Assets/PluginYourGames/Scripts/Server/Editor/Server.cs"
+"Assets/PluginYourGames/Scripts/Server/Editor/VersionControlWindow.cs"
+"Assets/PluginYourGames/Scripts/Server/Editor/WelcomeWindow.cs"
 -langversion:9.0
 /deterministic
 /optimize+
