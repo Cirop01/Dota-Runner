@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
@@ -15,8 +16,8 @@ public class PlayerController : MonoBehaviour
     public float lineDistance = 4;
     private float maxSpeed = 90;
     public static int coins = 0;
-    
-    
+
+
     [SerializeField] private GameObject losePanel;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
@@ -24,11 +25,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         coins = 0;
-    //    animate = GetComponent<Animator>();
+        //    animate = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         StartCoroutine(SpeedIncrease());
         Time.timeScale = 1;
-       
+
     }
 
     void UpdateRunes()
@@ -40,8 +41,8 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
 
-        
-        
+
+
         if (SwipeController.swipeRight)
         {
 
@@ -61,7 +62,7 @@ public class PlayerController : MonoBehaviour
                 //animate.SetBool("Running", false);
                 AnimatorController.Running_false();
                 Jump();
-            }                          
+            }
         }
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -99,24 +100,23 @@ public class PlayerController : MonoBehaviour
 
         // Проверяем, является ли персонаж приземленным
         if (controller.isGrounded && AnimatorController._animator.GetBool("Jumping"))
-            {
-                // Отключаем анимацию прыжка
-                //animate.SetBool("Jumping", false);
-                AnimatorController.Jumping_false();
-                // Включаем анимацию бега
-                //animate.SetBool("Running", true);
-                AnimatorController.Running_true();
-            }
+        {
+            // Отключаем анимацию прыжка
+            //animate.SetBool("Jumping", false);
+            AnimatorController.Jumping_false();
+            // Включаем анимацию бега
+            //animate.SetBool("Running", true);
+            AnimatorController.Running_true();
+        }
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.tag == "obstacle")
         {
-
             losePanel.SetActive(true);
             Time.timeScale = 0;
-            YandexGame.FullscreenShow();
+            YG2.InterstitialAdvShow();
         }
     }
 
@@ -124,15 +124,16 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Coin")
         {
-            coins+=1;
+            coins += 1;
             PlayerPrefs.SetInt("coins_while", coins);
+            PlayerPrefs.Save();
             Coins_counter1.text = coins.ToString();
             Coins_counter2.text = coins.ToString();
             Destroy(other.gameObject);
         }
 
     }
-    
+
 
 
     private IEnumerator SpeedIncrease()
@@ -141,7 +142,7 @@ public class PlayerController : MonoBehaviour
         if (speed < maxSpeed)
         {
             speed += 1;
-            StartCoroutine(SpeedIncrease());            
+            StartCoroutine(SpeedIncrease());
         }
         else
         {
@@ -149,8 +150,8 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    
-    
+
+
     private void OnFullscreenStart() => Debug.Log("ON FULLSCREEN START");
 
     private void OnFullscreenClose(bool success) => Debug.Log("ON FULLSCREEN CLOSE");

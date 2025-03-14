@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 
 public class Buy : MonoBehaviour
 {
@@ -80,6 +81,7 @@ public class Buy : MonoBehaviour
         c.isUnlocked = true;
         balance -= c.price;
         PlayerPrefs.SetInt("coins_all", balance);
+        PlayerPrefs.Save();
         
         
         

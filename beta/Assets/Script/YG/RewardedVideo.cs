@@ -5,38 +5,33 @@ using UnityEngine.UI;
 using YG;
 public class RewardedVideo : MonoBehaviour
 {
+    private string id;
     public Button Get_award;
     private int coins;
+
+    // public int reward;
 
     private void Start()
     {
         coins = PlayerPrefs.GetInt("coins_all");
-        Get_award.onClick.AddListener(delegate{Open_reward(1);});
+        Get_award.onClick.AddListener(delegate { Open_reward(); });
+        id = "coin";
     }
-    private void Rewarded(int id)
+    public void Open_reward()
     {
-        AddMoney();
-            
-    }
-    private void OnEnable()
-    {
-        YandexGame.RewardVideoEvent += Rewarded;
-    }
-    private void OnDisable()
-    {
-        YandexGame.RewardVideoEvent -= Rewarded;
+
+        YG2.RewardedAdvShow(id, AddMoney);
     }
 
-    private void Open_reward(int id)
+    public void AddMoney()
     {
-        YandexGame.RewVideoShow(id);
+        if (id == "coin")
+        {
+            coins += 100;
+            PlayerPrefs.SetInt("coins_all", coins);
+            PlayerPrefs.Save();
+        }
     }
 
-    void AddMoney()
-    {
-        coins += 100;
-        PlayerPrefs.SetInt("coins_all", coins);
-        // YandexGame.savesData.coins = PlayerPrefs.GetInt("coins_all");
-        // YandexGame.SaveProgress();
-    }
+
 }

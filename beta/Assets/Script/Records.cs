@@ -20,7 +20,6 @@ public class Records : MonoBehaviour
     {
         Coins = PlayerPrefs.GetInt("coins_all");
         coinsText.text = Coins.ToString();  
-        
     }
 
 

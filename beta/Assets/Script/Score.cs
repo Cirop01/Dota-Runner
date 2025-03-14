@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using YG;
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 public class Score : MonoBehaviour
 {
     [SerializeField] private Transform player;
@@ -50,6 +51,7 @@ public class Score : MonoBehaviour
         {
             best_score = last_score;
             PlayerPrefs.SetInt("best_score", best_score);
+            PlayerPrefs.Save();
         }
         // YandexGame.savesData.best_score = PlayerPrefs.GetInt("best_score");
         // YandexGame.savesData.coins = PlayerPrefs.GetInt("coins_all");

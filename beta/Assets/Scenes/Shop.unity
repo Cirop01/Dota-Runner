@@ -301,9 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 108812393}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u041D\u0435\u0442 \u0440\u0443\u043D"
   en: No runes
@@ -332,12 +332,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &120646234
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,9 +670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 162331273}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "+100 \u0437\u0430 \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440"
   en: +100 for watching
@@ -703,12 +701,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &166355263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,9 +1008,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 257388892}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u0412\u044B\u0431\u0440\u0430\u043D"
   en: Selected
@@ -1043,12 +1039,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: processing... 0/3
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &277754847
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1055,7 @@ GameObject:
   - component: {fileID: 277754851}
   - component: {fileID: 277754850}
   - component: {fileID: 277754849}
+  - component: {fileID: 277754852}
   m_Layer: 0
   m_Name: RewardVideo
   m_TagString: Untagged
@@ -1170,6 +1165,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277754847}
   m_CullTransparentMesh: 1
+--- !u!114 &277754852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277754847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52db2e7f52fa3e4890c26319aa971a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Get_award: {fileID: 277754849}
 --- !u!1 &284107423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,9 +1270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 284107425}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
   en: Select
@@ -1293,12 +1301,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &397088234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,9 +2895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 906133537}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u0426\u0435\u043D\u0430"
   en: Price
@@ -2920,12 +2926,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &949411049
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,9 +4290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 1343617370}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
   en: About
@@ -4317,12 +4321,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &1356235061
 GameObject:
   m_ObjectHideFlags: 0
@@ -4653,9 +4655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 1430986343}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u041F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0438"
   en: Heroes
@@ -4684,12 +4686,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: processing... 0/3
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &1459774137
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,9 +5189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 1632221513}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u041A\u0443\u043F\u0438\u0442\u044C"
   en: Buy
@@ -5220,12 +5220,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &1644100051
 GameObject:
   m_ObjectHideFlags: 0
@@ -6309,10 +6307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 2
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1084.38, y: 600}
+  m_ReferenceResolution: {x: 878.3, y: 1}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

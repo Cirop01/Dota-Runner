@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using PlayerPrefs = RedefineYG.PlayerPrefs;
 public class Shop : MonoBehaviour
 {
     public string objectName;
@@ -36,6 +36,7 @@ public class Shop : MonoBehaviour
                 balance = balance - price;
                 PlayerPrefs.SetInt("coins_all", balance);
                 Popa();
+                PlayerPrefs.Save();
             }
         }
     }
