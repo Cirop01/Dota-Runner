@@ -494,9 +494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 144872398}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u041F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0438"
   en: Heroes
@@ -525,12 +525,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 3
+  additionalText: {fileID: 0}
 --- !u!1 &307913483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1397,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736499431}
   m_CullTransparentMesh: 1
+--- !u!1001 &742152522
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.941494
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 62.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 141.56398
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000003090862
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000003090862
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889982141201457655, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834850975193500410, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
+      propertyPath: m_Name
+      value: small_min
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b8bf3e808dcd5744ab287fa6c5e95d6, type: 3}
 --- !u!1 &852764719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,9 +1632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 935478970}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u041B\u0443\u0447\u0448\u0438\u0439 \u0440\u0435\u043A\u043E\u0440\u0434"
   en: Best result
@@ -1608,12 +1663,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 3
+  additionalText: {fileID: 0}
 --- !u!1 &999187253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,75 +1872,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999187253}
   m_CullTransparentMesh: 1
---- !u!1001 &1102635262
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: singleton
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: OpenVideoAd.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: OpenVideoAd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745197, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_Name
-      value: YandexGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: caf9732433f4dc044845763962493607, type: 3}
 --- !u!1 &1227872876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,9 +2244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 1418254449}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u0420\u0443\u043D\u044B"
   en: Runes
@@ -2291,12 +2275,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &1442911400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,9 +2371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 1442911402}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
   en: Settings
@@ -2420,12 +2402,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 3
+  additionalText: {fileID: 0}
 --- !u!1 &1449784287
 GameObject:
   m_ObjectHideFlags: 0
@@ -3276,9 +3256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 1773223771}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u0420\u0435\u0439\u0442\u0438\u043D\u0433"
   en: Rating
@@ -3307,12 +3287,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &1818964757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,9 +3383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUIComponent: {fileID: 1818964759}
-  textMeshComponent: {fileID: 0}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
+  textMPComponent: {fileID: 0}
+  uniqueFontTMP: {fileID: 0}
+  textLComponent: {fileID: 0}
   text: 
   ru: "\u0418\u0433\u0440\u0430\u0442\u044C"
   en: Play
@@ -3436,12 +3414,10 @@ MonoBehaviour:
   it: 
   de: 
   hi: 
+  changeOnlyFont: 0
   fontNumber: 0
   uniqueFont: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 
-  componentTextField: 1
-  countLang: 0
+  additionalText: {fileID: 0}
 --- !u!1 &1880088210
 GameObject:
   m_ObjectHideFlags: 0
@@ -7178,6 +7154,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8285707138597593736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2211564898147523217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211564898147523219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2211564898147523218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211564898147523219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404d6214ebdd58d43a94c7ed650dc2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  singleton: 1
+  ResolvedAuthorization:
+    m_PersistentCalls:
+      m_Calls: []
+  RejectedAuthorization:
+    m_PersistentCalls:
+      m_Calls: []
+  OpenFullscreenAd:
+    m_PersistentCalls:
+      m_Calls: []
+  CloseFullscreenAd:
+    m_PersistentCalls:
+      m_Calls: []
+  ErrorFullscreenAd:
+    m_PersistentCalls:
+      m_Calls: []
+  OpenVideoAd:
+    m_PersistentCalls:
+      m_Calls: []
+  CloseVideoAd:
+    m_PersistentCalls:
+      m_Calls: []
+  RewardVideoAd:
+    m_PersistentCalls:
+      m_Calls: []
+  ErrorVideoAd:
+    m_PersistentCalls:
+      m_Calls: []
+  PurchaseSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  PurchaseFailed:
+    m_PersistentCalls:
+      m_Calls: []
+  PromptDo:
+    m_PersistentCalls:
+      m_Calls: []
+  PromptFail:
+    m_PersistentCalls:
+      m_Calls: []
+  ReviewDo:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &2211564898147523219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2211564898147523217}
+  - component: {fileID: 2211564898147523218}
+  - component: {fileID: 3157483473619865218}
+  m_Layer: 0
+  m_Name: YandexGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 2800000, guid: 75e2137d812e0484ca28df46b6bbc6f2, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &2226836019212932666
 Transform:
   m_ObjectHideFlags: 0
@@ -8559,6 +8623,39 @@ Transform:
   - {fileID: 3621000349134643216}
   m_Father: {fileID: 4691278993904212349}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3157483473619865218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211564898147523219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5b227a20855044e9f75626696e0719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseType: 3
+  pauseMethod: 1
+  closingADValues:
+    timeScale: 1
+    audioPause: 0
+    cursorVisible: 0
+    cursorLockMode: 0
+  awakeSetValues: 0
+  awakeValues:
+    timeScale: 1
+    audioPause: 0
+    cursorVisible: 0
+    cursorLockMode: 0
+  customEvents:
+    OpenAd:
+      m_PersistentCalls:
+        m_Calls: []
+    CloseAd:
+      m_PersistentCalls:
+        m_Calls: []
+  logPause: 0
 --- !u!1 &3175471610103262013
 GameObject:
   m_ObjectHideFlags: 0
@@ -18355,4 +18452,5 @@ SceneRoots:
   - {fileID: 7472339629911645893}
   - {fileID: 543450652098961101}
   - {fileID: 1880088212}
-  - {fileID: 1102635262}
+  - {fileID: 2211564898147523217}
+  - {fileID: 742152522}
